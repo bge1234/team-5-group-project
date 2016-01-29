@@ -13,7 +13,7 @@ Denverites and cool people, & companies like DPL, museums/institutions/business
 * JavaScript
 * CSS
 * HTML
-* OAuth
+* https://loginwithfacebook.firebaseapp.com
 * Mocha/Chai
 * APIs
 
