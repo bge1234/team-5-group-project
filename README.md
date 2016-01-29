@@ -14,7 +14,7 @@ Denverites and cool people, & companies like DPL, museums/institutions/business
 * CSS
 * HTML
 * OAuth
-* TDD
+* Mocha/Chai
 
 ### Feature list:
 * All of the previously discussed project requirements are the MVP
