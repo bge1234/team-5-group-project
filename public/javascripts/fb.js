@@ -35,8 +35,6 @@ function checkLoginState() {
    if (d.getElementById(id)) {return;}
    js = d.createElement(s); js.id = id;
    js.src = "https://connect.facebook.net/en_US/all.js";
-  // Apparently this sdk.js is no longer supported
-  //  js.src = "//connect.facebook.net/en_US/sdk.js";
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
 
@@ -64,17 +62,13 @@ function checkLoginState() {
 FB.getLoginStatus(function(response) {
   statusChangeCallback(response);
   });
-
 };
-
 // Load the SDK asynchronously
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  // Apparently this sdk.js is no longer supported
-  // js.src = "https://connect.facebook.net/en_US/all.js";
-  js.src = "//connect.facebook.net/en_US/sdk.js";
+  js.src = "https://connect.facebook.net/en_US/all.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -89,6 +83,12 @@ function testAPI() {
   });
 }
 
+el.addEventListener("click", function(){modifyText("four")}, false);
+
+
 // I'm not sure how to get the logout function to work
-// FB.logout(function(response) {
-// })
+d.getElementsByClassName('logout').addEventListener("click", FB.logout(function(response){}), false);
+// function logoutOfFacebook(){
+  // FB.logout(function(response) {
+  // })
+// }

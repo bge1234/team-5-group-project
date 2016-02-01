@@ -6,5 +6,7 @@ html
   body
     script(type='text/javascript', src='/javascripts/fb.js')
     fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
+    .fb-like(data-share='true', data-width='450', data-show-faces='true')
+    button.logout Logout
     #status
     block content
