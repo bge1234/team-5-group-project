@@ -8,7 +8,7 @@ var knex = require('knex');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var activities = require('./routes/activities');
+var freebies = require('./routes/freebies');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/activities', activities);
+app.use('/freebies', freebies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
