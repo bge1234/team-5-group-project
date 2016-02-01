@@ -38,7 +38,7 @@ router.post('/', function(req, res, next) {
     details: req.body.details
   };
   freebies().insert(newFreebie).then(function(results) {
-    res.redirect('/');
+    res.redirect('/freebies');
   })
 });
 
@@ -52,7 +52,7 @@ router.get('/:id/edit', function(req, res, next) {
 // post edit freebies
 router.post('/:id', function(req, res, next) {
   freebies().where('id', req.params.id).update(req.body).then(function(results) {
-    res.redirect('/');
+    res.redirect('/freebies');
   })
 });
 
@@ -60,7 +60,7 @@ router.post('/:id', function(req, res, next) {
 // delete freebies
 router.get('/:id/delete', function(req, res, next) {
   freebies().where('id', req.params.id).del().then(function(results) {
-    res.redirect('/');
+    res.redirect('/freebies');
   })
 });
 
