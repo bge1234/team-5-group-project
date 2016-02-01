@@ -13,7 +13,7 @@ exports.up = function(knex, Promise) {
     table.text('location');
     table.text('details');
     table.string('url');
-    table.integer('user_id');
+    table.integer('creator_id');
   })
 };
 
