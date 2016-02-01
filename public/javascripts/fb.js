@@ -83,7 +83,7 @@ function testAPI() {
   });
 }
 
-el.addEventListener("click", function(){modifyText("four")}, false);
+// el.addEventListener("click", function(){modifyText("four")}, false);
 
 
 // I'm not sure how to get the logout function to work
