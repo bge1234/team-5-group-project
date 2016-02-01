@@ -1,4 +1,8 @@
-Ben and Teisia were here.
+
+Ben, Maria and Teisia were here.
+
+
+
 # freedenver.co
 A site that pulls information on free denver events and things.
 #### Mikel wuz here
