@@ -1,11 +1,5 @@
-
-Ben, Maria and Teisia were here.
-
-
-
 # freedenver.co
 A site that pulls information on free denver events and things.
-#### Mikel wuz here
 
 * Heroku: https://freedenver.herokuapp.com
 * GitHub: https://github.com/bge1234/team-5-group-project
