@@ -5,5 +5,5 @@ var router = express.Router();
 router.get('/:id', function(req, res, next) {
   res.render('pages/user-activities');
 });
-console.log("stuff!");
+
 module.exports = router;
