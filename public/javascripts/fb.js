@@ -87,7 +87,7 @@ function testAPI() {
 
 
 // I'm not sure how to get the logout function to work
-d.getElementsByClassName('logout').addEventListener("click", FB.logout(function(response){}), false);
+document.getElementsByClassName('logout').addEventListener("click", FB.logout(function(response){}), false);
 // function logoutOfFacebook(){
   // FB.logout(function(response) {
   // })
