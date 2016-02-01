@@ -3,15 +3,19 @@ var router = express.Router();
 var knex = require('../db/knex');
 
 function freebies(){
- return knex('freebies')
+ return knex('freebies');
 };
 
 function users(){
- return knex('users')
+ return knex('users');
 };
 
 function categories(){
- return knex('categories')
+ return knex('categories');
+};
+
+function admin(){
+ return knex('admin');
 };
 
 // get activites and maps page
