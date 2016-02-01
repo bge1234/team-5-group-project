@@ -83,9 +83,12 @@ function testAPI() {
   });
 }
 
+el.addEventListener("click", function(){modifyText("four")}, false);
+
+
 // I'm not sure how to get the logout function to work
-// d.getElementsByClassName('logout').click()
-function logoutOfFacebook(){
-  FB.logout(function(response) {
-  })
-}
+d.getElementsByClassName('logout').addEventListener("click", FB.logout(function(response){}), false);
+// function logoutOfFacebook(){
+  // FB.logout(function(response) {
+  // })
+// }
