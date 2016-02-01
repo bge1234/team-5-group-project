@@ -4,8 +4,7 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    script(type='text/javascript', src='../public/javascripts/fb.js')
+    script(type='text/javascript', src='/javascripts/fb.js')
     fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
     #status
     block content
-      
