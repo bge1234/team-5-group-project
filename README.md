@@ -1,4 +1,3 @@
-teisia was here
 # freedenver.co
 A site that pulls information on free denver events and things.
 
