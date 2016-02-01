@@ -1,5 +1,5 @@
 # freedenver.co
-A site that pulls information on free denver events and things.
+A site that pulls information on free denver freebiess and things.
 
 * Heroku: https://freedenver.herokuapp.com
 * GitHub: https://github.com/bge1234/team-5-group-project
