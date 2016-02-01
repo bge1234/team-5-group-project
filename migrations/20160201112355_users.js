@@ -5,8 +5,8 @@ exports.up = function(knex, Promise) {
     table.string('last_name');
     table.string('email');
     table.integer('phone_number');
-    table.text('freebie_faves');
-    table.text('category_preferences');
+    table.string('freebie_id');
+    table.string('category_preferences_id');
   })
 };
 
