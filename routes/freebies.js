@@ -10,12 +10,8 @@ function users(){
  return knex('users')
 };
 
-function sub_categories(){
- return knex('sub_categories')
-};
-
-function top_categories(){
- return knex('top_categories')
+function categories(){
+ return knex('categories')
 };
 
 // get activites and maps page
