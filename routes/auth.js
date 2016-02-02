@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // sign in page
-router.get('/sign-in', function(req, res, next) {
+router.get('/login/sign-in', function(req, res, next) {
   res.render('login/sign-in');
 });
 

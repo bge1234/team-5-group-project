@@ -5,17 +5,17 @@ var categories = require('../db/lib/categories')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // res.render('index', { title: 'FreeDenver.co' });
-  res.redirect('/freebies');
+  res.render('index', { title: 'FreeDenver.co' });
+  // res.redirect('/freebies');
 });
 
 // about us page
-router.get('/about', function(req, res, next) {
+router.get('/info/about', function(req, res, next) {
   res.render('info/about');
 });
 
 // contact us page
-router.get('/contact', function(req, res, next) {
+router.get('/info/contact', function(req, res, next) {
   res.render('info/contact');
 });
 
