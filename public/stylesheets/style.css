@@ -41,12 +41,12 @@ div.fb_reset{
 .nav>li:focus{
   background-color: transparent;
 }
-.freebies  {
-  width: 25% !important;
-  margin: 0 auto;
-}
+
 .categories{
   margin-bottom: 10%;
+  border: 1px solid green;
+  width: 25% !important;
+  margin: 0 auto;
 }
 .calendar {
   display: flex;

@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-var categories = require('../db/lib/categories')
+var categories = require('../db/lib/categories');
+var multi = require('../db/lib/functions');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // res.render('index', { title: 'FreeDenver.co' });
-  res.redirect('/freebies');
+  res.render('index', { title: 'FreeDenver.co', categories: categories});
+  // res.redirect('/freebies');
 });
 
 // about us page
@@ -34,5 +35,7 @@ router.get('/mapsearch', function(req, res, next) {
     }
   });
 });
+
+
 
 module.exports = router;
