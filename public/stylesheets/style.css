@@ -6,3 +6,19 @@ body {
 a {
   color: #00B7FF;
 }
+#fb-root{
+  display: none;
+}
+
+.fb-buttons{
+  float: right;
+}
+
+.logout{
+  background-color: #3F5AA7;
+  color: white;
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
+  border-radius: 10%;
+  border: none;
+}
