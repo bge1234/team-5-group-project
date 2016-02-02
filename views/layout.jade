@@ -10,14 +10,48 @@ html
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
     
   body
+    //- NAV BAR
     nav.navbar.navbar-default.navbar-fixed-top
-      div.fb-buttons
-        script(type='text/javascript', src='/javascripts/fb.js')
-        fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
-        .fb-like(data-share='true', data-width='450', data-show-faces='true')
-        button.logout Logout
-        #status
-    block content
+      script(type='text/javascript', src='/javascripts/fb.js')
+      fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
+      .fb-like(data-share='true', data-width='450', data-show-faces='true')
+      button.logout Logout
+      #status
+        div.container
+          div.navbar-collapse.collapse
+              ul.nav.nav-justified
+                li
+                  a(href='#') About
+                li
+                  a(href='#') Sign in
+                li
+                  a(href='#') Contact
+                li
+                  a(href='#') Partner With Us
+                li
+                  a(href='#') Another Link
+                  
+      div.nav-header
+        button.navbar-toggle(data-toggle='collapse' data-target='.navbar-collapse')  
+          span.sr-only Toggle Navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+          
+    //- BACKGROUND IMG      
+    section.splash_img.parallax
+      block content
       
+    //- FREEBIES
+    section
+      select(multiple)
+          option Option Goods
+          option Option Two
+          option Option Three
+          option Option Four
+          option Option Five
+          option Option Six
+          option Option Seven
+            
     footer.footer.navbar-fixed-bottom
       p.text-center.text-uppercase Copyright right info goes here

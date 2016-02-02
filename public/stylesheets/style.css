@@ -6,7 +6,7 @@ body {
 a {
   color: #00B7FF;
 }
-#fb-root{
+div.fb_reset{
   display: none;
 }
 
@@ -21,4 +21,23 @@ a {
   font-size: 11px;
   border-radius: 10%;
   border: none;
+}
+ h1, .title{
+   text-align: center;
+   margin: 0 auto;
+ }
+
+.parallax{
+  background-image: url(../images/denver-watercolor.png);
+  height: 800px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.navbar-default{
+  min-height: 90px;
+}
+.nav>li>a:hover,
+.nav>li:focus{
+  background-color: transparent;
 }
