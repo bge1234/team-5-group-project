@@ -3,6 +3,8 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name');
     table.string('url');
+    table.string('username');
+    table.string('password');
   })
 };
 
