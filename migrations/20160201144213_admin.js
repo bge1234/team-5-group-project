@@ -1,11 +1,11 @@
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('admin', function(table){
+  return knex.schema.createTable('megausers', function(table){
     table.increments();
     table.string('name');
-    table.string('avatar');
+    table.string('url');
   })
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('admin');
+  return knex.schema.dropTable('megausers');
 };
