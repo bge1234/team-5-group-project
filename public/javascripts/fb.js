@@ -82,3 +82,7 @@ function testAPI() {
       'Thanks for logging in, ' + response.name + '!';
   });
 }
+
+FB.logout(function(response) {
+  // user is now logged out
+});
