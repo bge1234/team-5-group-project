@@ -41,24 +41,20 @@ html
     //- BACKGROUND IMG      
     section.splash_img.parallax
       block content
-      
+    br
+    br
+    br
     //- FREEBIES
-    section
-      select(multiple)
-          option Option Goods
-          option Option Two
-          option Option Three
-          option Option Four
-          option Option Five
-          option Option Six
-          option Option Seven
-            
+    section.categories
+      div.container.text-center
+        label
+          p.text-center What would you like to do today?
+        select.form-control.freebies(multiple)
+          option Goods
+          option Music
+          option Art & Culture
+          option Family
+          option Outdoors
+    
     footer.footer.navbar-fixed-bottom
-      p.text-center.text-uppercase Copyright right info goes here
-
-    script(type='text/javascript', src='/javascripts/fb.js')
-    fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
-    .fb-like(data-share='true', data-width='450', data-show-faces='true')
-    a(href='/', onclick='FB.logout();') Logout    
-    #status
-    block content
+        p.text-center.text-uppercase Copyright right info goes here
