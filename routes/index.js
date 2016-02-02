@@ -21,7 +21,7 @@ router.get('/info/contact', function(req, res, next) {
 
 // contact us page
 router.get('/map', function(req, res, next) {
-  res.render('maptest', {lat: 39.757785, lng: -105.007142});
+  res.render('map', {lat: 39.757785, lng: -105.007142});
 });
 
 router.get('/mapsearch', function(req, res, next) {
