@@ -92,3 +92,5 @@ d.getElementsByClassName('logout').addEventListener("click", FB.logout(function(
   // FB.logout(function(response) {
   // })
 // }
+
+$('nav').css('color:', 'red')
