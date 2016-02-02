@@ -11,7 +11,7 @@ html
     
   body
     //- NAV BAR
-    nav.navbar.navbar-default.navbar-fixed-top
+    nav.navbar.navbar-default.navbar-fixed-bottom
       script(type='text/javascript', src='/javascripts/fb.js')
       fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
       .fb-like(data-share='true', data-width='450', data-show-faces='true')
@@ -56,5 +56,3 @@ html
           option Family
           option Outdoors
     
-    footer.footer.navbar-fixed-bottom
-        p.text-center.text-uppercase Copyright right info goes here
