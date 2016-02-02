@@ -82,13 +82,3 @@ function testAPI() {
       'Thanks for logging in, ' + response.name + '!';
   });
 }
-
-// el.addEventListener("click", function(){modifyText("four")}, false);
-
-
-// I'm not sure how to get the logout function to work
-document.getElementsByClassName('logout').addEventListener("click", FB.logout(function(response){}), false);
-// function logoutOfFacebook(){
-  // FB.logout(function(response) {
-  // })
-// }
