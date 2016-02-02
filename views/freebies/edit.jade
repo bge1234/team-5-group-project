@@ -3,21 +3,7 @@ extends ../layout
 block content
   h1 This is the edit freebies page
   if freebies
-    form(method='post' action='/freebies/'+freebies.id+'')  
-      label(for='name') Name
-      br
-      input(type='text' id='name' name='name' value=freebies.name)
-      br 
-      label(for='location') Location
-      br
-      input(type='text' id='location' name='location' value=freebies.location)
-      br
-      label(for='details') Details
-      br
-      textarea(id='details', name='details') #{freebies.details}
-      br
-      button: a(href='/freebies') Cancel
-      br
-      button(type='submit') Submit
+    form(method='post' action='/freebies/'+freebies.id+'')
+      include ../includes/freebie-form.jade
       br
       button: a(href='/freebies/'+freebies.id+'/delete') Delete
