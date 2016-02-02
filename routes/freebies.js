@@ -21,13 +21,13 @@ function admin(){
 // get activites and maps page
 router.get('/', function(req, res, next) {
   freebies().select().then(function(results) {
-    res.render('pages/freebies', {freebies: results});
+    res.render('freebies/index', {freebies: results});
   })
 });
 
 // show add freebies page
 router.get('/new', function(req, res, next) {
-  res.render('pages/new-freebie');
+  res.render('freebies/new');
 });
 
 // add freebies
@@ -45,7 +45,7 @@ router.post('/', function(req, res, next) {
 // edit freebies
 router.get('/:id/edit', function(req, res, next) {
   freebies().where('id', req.params.id).first().then(function(results) {
-    res.render('pages/edit-freebie', {freebies: results});
+    res.render('freebies/edit', {freebies: results});
   })
 });
 
