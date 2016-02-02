@@ -1,0 +1,31 @@
+label(for='name') Name
+br
+input(type='text' id='name' name='name' placeholder=freebies ? "" : "Name" value=freebies ? freebies.name : "")
+br
+label(for='location') Address
+br
+input(type='text' id='location' name='location' placeholder=freebies ? "" : "Address" value=freebies ? freebies.location : "")
+br
+label(for='start_date') Start date
+br
+input(type='text' id='start_date' name='start_date' placeholder=freebies ? "" : "MM/dd/yyyy hh:mm:ss" value=freebies ? freebies.start_date : "")
+br
+label(for='end') End date
+br
+input(type='text' id='end_date' name='end_date' placeholder=freebies ? "" : "MM/dd/yyyy hh:mm:ss" value=freebies ? freebies.end_date : "")
+br
+label(for='details') Details
+br
+if freebies
+  textarea(id='details', name='details') #{freebies.text}
+else
+  textarea(id='details', name='details' placeholder="Details")
+br
+button: a(href='/freebies') Cancel
+br
+label(for='url') URL
+br
+input(type='text' id='url' name='url' placeholder=freebies ? "" : "URL" value=freebies ? freebies.url : "")
+br
+input(type='text' id='location' name='location' placeholder=freebies ? "" : "Address" value=freebies ? freebies.location : "" hidden)
+button(type='submit') Submit
