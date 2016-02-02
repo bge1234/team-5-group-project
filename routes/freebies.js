@@ -32,12 +32,7 @@ router.get('/new', function(req, res, next) {
 
 // add freebies
 router.post('/', function(req, res, next) {
-  var newFreebie = {
-    name: req.body.name,
-    location: req.body.location,
-    details: req.body.details
-  };
-  freebies().insert(newFreebie).then(function(results) {
+  freebies().insert(req.body).then(function(results) {
     res.redirect('/freebies');
   })
 });
