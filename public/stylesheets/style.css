@@ -45,7 +45,30 @@ div.fb_reset{
   width: 25% !important;
   margin: 0 auto;
 }
-
 .categories{
   margin-bottom: 10%;
+}
+.calendar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.event {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  background-color: rgba(30, 93, 106, 0.6);
+  margin: 2vh;
+  margin: auto;
+}
+.parralax {
+  display: flex;
+}
+.freebieTitle {
+  margin: auto;
+}
+.location {
+  margin: auto;
 }
