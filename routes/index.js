@@ -30,7 +30,7 @@ router.get('/mapsearch', function(req, res, next) {
       var jase = JSON.parse(body);
       var lat = jase["results"][0]["geometry"]["location"]["lat"];
       var lng = jase["results"][0]["geometry"]["location"]["lng"];
-      res.render('maptest', { lat: lat, lng: lng });
+      res.render('map', { lat: lat, lng: lng });
     }
   });
 });
