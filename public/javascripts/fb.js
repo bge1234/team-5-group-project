@@ -59,10 +59,30 @@ function checkLoginState() {
 //
 // These three cases are handled in the callback function.
 
+
 FB.getLoginStatus(function(response) {
   statusChangeCallback(response);
   });
+
+
+// FB.logout(function(response) {
+//   // user is now logged out
+// });
+
 };
+
+window.onload=function() {
+    FB.init({ apiKey: '1667756330178924' });
+}
+function handleSessionResponse(response) {
+    //if we dont have a session (which means the user has been logged out, redirect the user)
+    if (!response.session) {
+        window.location = "/";
+        return;
+    }
+    FB.logout(handleSessionResponse);
+}
+
 // Load the SDK asynchronously
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -82,13 +102,3 @@ function testAPI() {
       'Thanks for logging in, ' + response.name + '!';
   });
 }
-
-// el.addEventListener("click", function(){modifyText("four")}, false);
-
-
-// I'm not sure how to get the logout function to work
-d.getElementsByClassName('logout').addEventListener("click", FB.logout(function(response){}), false);
-// function logoutOfFacebook(){
-  // FB.logout(function(response) {
-  // })
-// }

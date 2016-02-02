@@ -56,7 +56,6 @@ router.post('/:id', function(req, res, next) {
   })
 });
 
-
 // delete freebies
 router.get('/:id/delete', function(req, res, next) {
   freebies().where('id', req.params.id).del().then(function(results) {

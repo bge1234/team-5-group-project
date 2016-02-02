@@ -10,6 +10,7 @@ html
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
     
   body
+<<<<<<< HEAD
     //- NAV BAR
     nav.navbar.navbar-default.navbar-fixed-top
       script(type='text/javascript', src='/javascripts/fb.js')
@@ -55,3 +56,10 @@ html
             
     footer.footer.navbar-fixed-bottom
       p.text-center.text-uppercase Copyright right info goes here
+
+    script(type='text/javascript', src='/javascripts/fb.js')
+    fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
+    .fb-like(data-share='true', data-width='450', data-show-faces='true')
+    a(href='/', onclick='FB.logout();') Logout    
+    #status
+    block content
