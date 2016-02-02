@@ -1,19 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'FreeDenver.co' });
-});
-
-// sign in page
-router.get('/sign-in', function(req, res, next) {
-  res.render('login/sign-in');
-});
-
-// sign up page
-router.get('/sign-up', function(req, res, next) {
-  res.render('login/sign-up');
 });
 
 // about us page
@@ -26,6 +17,20 @@ router.get('/contact', function(req, res, next) {
   res.render('info/contact');
 });
 
+// contact us page
+router.get('/map', function(req, res, next) {
+  res.render('maptest', {lat: 39.757785, lng: -105.007142});
+});
 
+router.get('/mapsearch', function(req, res, next) {
+  request("https://maps.googleapis.com/maps/api/geocode/json?address=" + req.param('location').split(' ').join('+'), function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      var jase = JSON.parse(body);
+      var lat = jase["results"][0]["geometry"]["location"]["lat"];
+      var lng = jase["results"][0]["geometry"]["location"]["lng"];
+      res.render('maptest', { lat: lat, lng: lng });
+    }
+  });
+});
 
 module.exports = router;

@@ -1,0 +1,24 @@
+extends ./layout
+
+block content
+  p Here is a map:
+  center
+  form.mapsearch(action="/mapsearch" method="get")
+    label(for="location")
+      input(type="text" id="location" name="location" placeholder="Enter location to map" required)
+    button.go.neighborhoodsbutton(type="submit") Go
+  br
+  div(id="maparea" style="width: 300px; height: 300px;")
+    script.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('maparea'), {
+          zoom: 14,
+          center: {lat: #{lat}, lng: #{lng}}
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: #{lat}, lng: #{lng}},
+          map: map
+        });
+      }
+
+  script(async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap")
