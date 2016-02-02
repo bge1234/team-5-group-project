@@ -21,11 +21,11 @@ if freebies
 else
   textarea(id='details', name='text' placeholder="Details")
 br
-button: a(href='/freebies') Cancel
-br
 label(for='url') URL
 br
 input(type='text' id='url' name='url' placeholder=freebies ? "" : "URL" value=freebies ? freebies.url : "")
 br
 input(type='text' id='location' name='location' placeholder=freebies ? "" : "Address" value=freebies ? freebies.creator_id : "" hidden)
+br
+button: a(href='/freebies') Cancel
 button(type='submit') Submit
