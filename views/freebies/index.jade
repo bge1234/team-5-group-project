@@ -8,7 +8,8 @@ block content
     for freebie in freebies 
       .event
         .freebieTitle= freebie.name
-        .location= freebie.location
+        .location
+          a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
         a.edit(href="/freebies/" + freebie.id + '/edit') Edit
     for event in events 
       li: a(href=''+event.event_url+'')= event.name 
