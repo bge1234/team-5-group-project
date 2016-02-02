@@ -11,4 +11,8 @@ router.get('/sign-up', function(req, res, next) {
   res.render('login/sign-up');
 });
 
+// partner with us link clicked
+router.get('/partner/new', function(req, res, next) {
+  res.render('partners/new');
+});
 module.exports = router;

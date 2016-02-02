@@ -5,8 +5,8 @@ var categories = require('../db/lib/categories')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'FreeDenver.co' });
-  // res.redirect('/freebies');
+  // res.render('index', { title: 'FreeDenver.co' });
+  res.redirect('/freebies');
 });
 
 // about us page
