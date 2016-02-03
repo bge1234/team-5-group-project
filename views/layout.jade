@@ -28,9 +28,7 @@ html
                   a(href='/info/contact') Contact
                 li
                   a(href='/partner/new') Partner With Us
-                li
-                  a(href='#') Another Link
-                  
+                
       div.nav-header
         button.navbar-toggle(data-toggle='collapse' data-target='.navbar-collapse')  
           span.sr-only Toggle Navigation
@@ -40,18 +38,19 @@ html
           
     //- BACKGROUND IMG        
     section.splash_img.parallax
-      block content
+      block title
     br
     br
     br
-
-    //- FREEBIES
-    section
-      div.container.text-center
-        label
-          p.text-center What would you like to do today?
-        select.form-control.categories(multiple='')
-          - for(i = 0; i< categories.length; i++){
-            option.= categories[i]
-          - }
-  
+    
+    block content
+    //- //- FREEBIES
+    //- section
+    //-   div.container.text-center
+    //-     label
+    //-       p.text-center What would you like to do today?
+    //-     select.form-control.categories(multiple='')
+    //-       - for(i = 0; i< categories.length; i++){
+    //-         option = categories[i]
+    //-       - }
+    //- 

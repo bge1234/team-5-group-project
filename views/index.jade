@@ -1,5 +1,16 @@
 extends layout
 
-block content
+block title
   h2.title Welcome to #{title}
+block content
+
+  //- CATEGORIES
+  section
+    div.container.text-center
+      label
+        p.text-center What would you like to do today?
+      select.form-control.categories(multiple='')
+        - for(i = 0; i< categories.length; i++){
+          option.= categories[i]
+        - }
   
