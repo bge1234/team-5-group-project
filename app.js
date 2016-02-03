@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var knex = require('knex');
 var unirest = require('unirest');
 
+var bouncer = require('./lib/bouncer');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var freebies = require('./routes/freebies');
@@ -27,9 +29,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
-app.use('/freebies', freebies);
 app.use('/', auth);
+app.use('/', users);
+app.use('/', bouncer.ruloggedin);
+app.use('/freebies', freebies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
