@@ -10,8 +10,6 @@ function Freebies(){
  return knex('freebies');
 };
 
-
-
 // get specific megauser's freebies page
 router.get('/:username/freebies', function(req, res, next) {
   Users().where('username', req.params.username).first().then(function(result){

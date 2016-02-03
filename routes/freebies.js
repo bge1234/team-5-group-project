@@ -3,6 +3,7 @@ var router = express.Router();
 var knex = require('../db/knex');
 var apiKey = process.env.MEETUP_API_KEY;
 var unirest = require('unirest');
+var validate = require('../lib/validations');
 
 function Freebies(){
  return knex('freebies');
@@ -80,9 +81,6 @@ router.get('/', function(req, res, next) {
         else
           endDates.push("Not provided");
       }
-
-      console.log(meetups[139]);
-
         res.render('freebies/index', {freebies: results, events: meetups, startDates: startDates, endDates: endDates});
     })
   })
@@ -95,9 +93,22 @@ router.get('/new', function(req, res, next) {
 
 // add freebies
 router.post('/', function(req, res, next) {
+  var errors=[];
+  errors.push(validate.nameIsNotBlank(req.body.name));
+  errors.push(validate.locationIsNotBlank(req.body.location));
+  errors.push(validate.startDateIsNotBlank(req.body.start_date));
+  errors.push(validate.detailsNotBlank(req.body.text));
+  errors.push(validate.urlNotBlank(req.body.url));
+    errors = errors.filter(function(error) {
+      return error.length;
+    })
+      if (errors.length) {
+        res.render('freebies/new', {errors: errors, info: req.body})
+      } else {
   Freebies().insert(req.body).then(function(results) {
     res.redirect('/freebies');
-  });
+    });
+  };
 });
 
 module.exports = router;

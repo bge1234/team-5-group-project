@@ -2,6 +2,7 @@ var express = require('express');
 var knex = require('../db/knex.js');
 var bcrypt = require('bcrypt');
 var router = express.Router();
+var validate = require('../lib/validations');
 
 function Users() {
    return knex('megausers');
