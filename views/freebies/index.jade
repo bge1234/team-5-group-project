@@ -16,7 +16,7 @@ block content
                     option(value=categoryid selected=(category ? (categoryid === "#{category.id}" ? "selected" : undefined) : undefined)) #{category.name}
             .form-group.footer.pull-left(style="margin-top:10px;")
               p
-                button.btn.btn-default(id="searchfreebies" type="submit") Submit 
+                button.btn.btn-default.form-control(id="searchfreebies" type="submit") Submit 
     if freebies
     .row
       .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
