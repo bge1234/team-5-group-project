@@ -2,8 +2,6 @@ var express = require('express');
 var knex = require('../db/knex.js');
 var router = express.Router();
 var request = require('request');
-var categories = require('../db/lib/categories')
-
 
 function Users() {
    return knex('megausers');
@@ -13,6 +11,10 @@ function Users() {
 router.get('/', function(req, res, next) {
   // res.render('index', { title: 'FreeDenver.co' });
   res.redirect('/freebies');
+});
+
+router.get('/info/corporate-partner', function(req, res, next) {
+  res.render('info/corporate-partner-info');
 });
 
 // show all megausers
