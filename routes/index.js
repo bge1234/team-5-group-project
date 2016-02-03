@@ -17,6 +17,10 @@ router.get('/info/corporate-partner', function(req, res, next) {
   res.render('info/corporate-partner-info');
 });
 
+// router.post('/splash', function(req, res, next) {
+//   res.render('info/corporate-partner-info');
+// });
+
 // show all megausers
 router.get('/megausers', function(req, res, next) {
   Users().select().then(function(results) {
