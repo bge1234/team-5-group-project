@@ -55,6 +55,8 @@ body {
 }
 
 
+
+
 .categories{
   border-radius: 10px;
   position: fixed;
@@ -68,9 +70,6 @@ body {
 label {
   margin-left: 1vh;
 }
-.filter {
-  position: fixed;
-}
 .fa {
   width: 100%;
 }
@@ -80,6 +79,10 @@ label {
   margin-left: 1vh;
   color: #2b2b2b;
 }
+
+
+
+
 .calendar {
   display: flex;
   flex-direction: row;
