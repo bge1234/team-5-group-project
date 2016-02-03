@@ -1,12 +1,9 @@
 var express = require('express');
 var knex = require('../db/knex');
 var unirest = require('unirest');
-<<<<<<< HEAD
 var validate = require('../lib/validations');
-=======
 var apiKey = process.env.MEETUP_API_KEY;
 var router = express.Router();
->>>>>>> 11a95191e45d4416f3a28ae96debc75f5d5f9f4d
 
 function Freebies(){
  return knex('freebies');
@@ -85,7 +82,6 @@ router.get('/freebies', function(req, res, next) {
   });
 });
 
-<<<<<<< HEAD
 // add freebies
 router.post('/', function(req, res, next) {
   var errors=[];
@@ -104,7 +100,7 @@ router.post('/', function(req, res, next) {
     res.redirect('/freebies');
     });
   };
-=======
+
 // home + freebies all
 router.get('/freebies/:categoryid', function(req, res, next) {
   Categories().select().then(function(categoryresults) {
@@ -114,9 +110,9 @@ router.get('/freebies/:categoryid', function(req, res, next) {
           var meetups = response.body.results;
           res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults});
         });
+      });
     });
   });
->>>>>>> 11a95191e45d4416f3a28ae96debc75f5d5f9f4d
 });
 
 module.exports = router;
