@@ -1,32 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/denversunset.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*background-color: black;*/
 }
 
-a {
-  color: #00B7FF;
-}
-div.fb_reset{
-  display: none;
+.errors {
+  color: red;
 }
 
-.fb-buttons{
-  float: right;
+.mainthings {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin-bottom: 25px;
 }
 
-.logout{
-  background-color: #3F5AA7;
-  color: white;
-  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
-  font-size: 11px;
-  border-radius: 10%;
-  border: none;
+.large-header-logo h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 150px;
+  color: black;
+  margin-bottom: 50px;
 }
- h1, .title{
-   text-align: center;
-   margin: 0 auto;
- }
 
+<<<<<<< HEAD
 .parallax{
   background-image: url(../images/denver-watercolor.png);
   height: 800px;
@@ -74,4 +70,11 @@ div.fb_reset{
 }
 .location {
   margin: auto;
+=======
+.fffooter {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 15px;
+>>>>>>> 7680de6d53a76e12b0ec6fedbda9126361750988
 }
