@@ -1,8 +1,10 @@
 var express = require('express');
 var knex = require('../db/knex');
 var unirest = require('unirest');
+var validate = require('../lib/validations');
 var apiKey = process.env.MEETUP_API_KEY;
 var router = express.Router();
+var request = require('request');
 
 function Freebies(){
  return knex('freebies');
@@ -76,11 +78,29 @@ router.get('/freebies', function(req, res, next) {
         else
           endDates.push("Not provided");
       }
-        console.log(meetups[0]);
         res.render('freebies/index', {freebies: results, events: meetups, startDates: startDates, endDates: endDates});
     });
   });
 });
+
+// add freebies
+router.post('/', function(req, res, next) {
+  var errors=[];
+  errors.push(validate.nameIsNotBlank(req.body.name));
+  errors.push(validate.locationIsNotBlank(req.body.location));
+  errors.push(validate.startDateIsNotBlank(req.body.start_date));
+  errors.push(validate.detailsNotBlank(req.body.text));
+  errors.push(validate.urlNotBlank(req.body.url));
+    errors = errors.filter(function(error) {
+      return error.length;
+    })
+      if (errors.length) {
+        res.render('freebies/new', {errors: errors, info: req.body})
+      } else {
+  Freebies().insert(req.body).then(function(results) {
+    res.redirect('/freebies');
+    });
+  };
 
 // home + freebies all
 router.get('/freebies/:categoryid', function(req, res, next) {
@@ -118,6 +138,7 @@ router.get('/freebies/:categoryid', function(req, res, next) {
          }
            res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults, startDates: startDates, endDates: endDates});
         });
+      });
     });
   });
 });
