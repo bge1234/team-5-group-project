@@ -4,6 +4,7 @@ var unirest = require('unirest');
 var validate = require('../lib/validations');
 var apiKey = process.env.MEETUP_API_KEY;
 var router = express.Router();
+var request = require('request');
 
 function Freebies(){
  return knex('freebies');
@@ -77,7 +78,6 @@ router.get('/freebies', function(req, res, next) {
         else
           endDates.push("Not provided");
       }
-        console.log(meetups[0]);
         res.render('freebies/index', {freebies: results, events: meetups, startDates: startDates, endDates: endDates});
     });
   });

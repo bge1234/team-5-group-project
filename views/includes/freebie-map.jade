@@ -1,14 +1,24 @@
 div(id="maparea" style="width: 800px; height: 400px;")
   script.
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('maparea'), {
-        zoom: 14,
-        center: {lat: #{lat}, lng: #{lng}}
-      });
-      var marker = new google.maps.Marker({
-        position: {lat: #{lat}, lng: #{lng}},
-        map: map
-      });
-    }
+   function initMap() {
+     var map = new google.maps.Map(document.getElementById('maparea'), {
+       zoom: 14,
+       center: {lat: 39.739236, lng: -104.990251}
+     });
+     var collection = (!{JSON.stringify(freebies)});
+       collection.forEach(function(addy,index){
+       $.ajax({
+         url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+addy,
+         method: 'GET'
+         }).done(function(response){
+           var loc = response.results[0].geometry.location
+           var marker = new google.maps.Marker({
+             position: {lat: loc.lat, lng: loc.lng},
+             map: map
+          });
+        });
+     });
+   }
+   
   script(async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap")
 br
