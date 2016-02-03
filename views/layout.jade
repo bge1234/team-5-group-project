@@ -3,14 +3,15 @@ html
   head
     title= title
     link(rel="stylesheet", href="/stylesheets/normalize.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+    script(src="https://code.jquery.com/jquery-2.2.0.min.js")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
     
   body
-    //- NAV BAR
     nav.navbar.navbar-default.navbar-fixed-bottom
       script(type='text/javascript', src='/javascripts/fb.js')
       fb:login-button(scope='public_profile,email', onlogin='checkLoginState();')
@@ -47,13 +48,47 @@ html
 
     //- FREEBIES
     section.categories
-      div.container.text-center
-        label
-          p.text-center What would you like to do today?
-        select.form-control.freebies(multiple='')
-          option Goods
-          option Music
-          option Art & Culture
-          option Family
-          option Outdoors
-  
+      i.fa.fa-filter.fa-3x
+      .options
+        .goods
+          input.cbox(type='checkbox', id="cbox1", value='goods')
+          label(for='cbox1') Goods
+        .music
+          input.cbox(type='checkbox', id="cbox2", value='music')
+          label(for='cbox2') Music
+        .artAndCulture
+          input.cbox(type='checkbox', id="cbox3", value='art_and_culture')
+          label(for='cbox3') Art & Culture
+        .outdoors
+          input.cbox(type='checkbox', id="cbox4", value='outdoors')
+          label(for='cbox4') Outdoors
+        .family
+          input.cbox(type='checkbox', id="cbox5", value='family')
+          label(for='cbox5') Family
+      script.
+        $(document).ready(function() {
+          $('.options').hide();
+        })
+            $('.fa').click(function(){
+              $(".options").animate({
+              height: "toggle"
+                }, 100, function() {
+              });
+            })
+          $('#cbox1').change(function() {
+            this.checked ? console.log('Goods is checked!') : console.log('Goods is un-checked!');
+          })
+          $('#cbox2').change(function() {
+            this.checked ? console.log('Music is checked!') : console.log('Music is un-checked!');
+          })
+          $('#cbox3').change(function() {
+            this.checked ? console.log('Art & Culture is checked!') : console.log('Art & Culture is un-checked!');
+          })
+          $('#cbox4').change(function() {
+            this.checked ? console.log('Outdoors is checked!') : console.log('Outdoors is un-checked!');
+          })
+          $('#cbox5').change(function() {
+            this.checked ? console.log('Family is checked!') : console.log('Family is un-checked!');
+          })
+        
+      

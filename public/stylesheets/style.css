@@ -26,9 +26,17 @@ div.fb_reset{
    text-align: center;
    margin: 0 auto;
  }
-
+body {
+  height: auto;
+  width: 100%;
+  background-image: linear-gradient(#6C8672, #C4D4AF);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0px;
+}
 .parallax{
-  background-image: url(../images/denver-watercolor.png);
+  /*background-image: url(../images/denver-watercolor.png);*/
   height: 800px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -46,12 +54,35 @@ div.fb_reset{
   margin: 0 auto;
 }
 .categories{
-  margin-bottom: 10%;
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  width: auto;
+  height: auto;
+  padding: 2vh;
+  color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+label {
+  margin-left: 1vh;
+}
+.filter {
+  position: fixed;
+}
+.fa {
+  width: 100%;
+}
+label {
+  font-size: 2vw;
+  margin: auto;
+  margin-left: 1vh;
+  color: #2b2b2b;
 }
 .calendar {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .event {
   display: flex;
@@ -61,7 +92,6 @@ div.fb_reset{
   border: 2px solid black;
   background-color: rgba(30, 93, 106, 0.6);
   margin: 2vh;
-  margin: auto;
 }
 .parralax {
   display: flex;

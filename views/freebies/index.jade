@@ -5,13 +5,13 @@ block content
   a.createFreebie(href="freebies/new") Create Freebie
   a.mapLink(href="/map") Freebie Map
   .calendar
-  if freebies
-    for freebie in freebies 
-      .event
-        .freebieTitle= freebie.name
-        .location
-          a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
-        a.edit(href="/freebies/" + freebie.id + '/edit') Edit
-  if events
-    for event in events 
-      li: a(href=''+event.event_url+'')= event.name 
+    if freebies
+      for freebie in freebies 
+        .event
+          .freebieTitle= freebie.name
+          .location
+            a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+          a.edit(href="/freebies/" + freebie.id + '/edit') Edit
+    if events
+      for event in events 
+        li: a(href=''+event.event_url+'')= event.name 
