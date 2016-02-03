@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  .container-fluid
+    include ../includes/large-logo-header.jade            
+    if users
+    .row
+      .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
+        h1 Partner Companies
+        table.table.table-striped
+          thead
+            tr
+              td Partner Name
+              td Partner Link
+          for user in users 
+            tr
+              td
+                h3 #{user.name}
+              td   
+                a #{user.url}        
