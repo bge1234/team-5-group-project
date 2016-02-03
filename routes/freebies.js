@@ -76,6 +76,7 @@ router.get('/freebies', function(req, res, next) {
         else
           endDates.push("Not provided");
       }
+        console.log(meetups[0]);
         res.render('freebies/index', {freebies: results, events: meetups, startDates: startDates, endDates: endDates});
     });
   });
@@ -87,8 +88,35 @@ router.get('/freebies/:categoryid', function(req, res, next) {
     Freebies().where('category_id',req.params.categoryid).then(function(results) {
       unirest.get('https://api.meetup.com/2/open_events?&sign=true&photo-host=public&country=us&city=denver&state=co&text=free&category=1,18,4,5,6,8,9,11,14,15,17,20,21&radius=15&status=upcoming&key=' + '3f7d255365182d12465e396b6267182e')
        .end(function(response) {
+
           var meetups = response.body.results;
-          res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults});
+          var startDates = [];
+          var endDates = [];
+
+         for (var i = 0; i < meetups.length; i++) {
+           date = new Date(meetups[i]["time"]);
+           var dateString = date.toString().split(' ');
+           var month = getMonth(dateString[1]).toString();
+           var day = dateString[2];
+           var year = dateString[3];
+           var time = dateString[4];
+           startDates.push(month + '/' + day + '/' + year + ' ' + time);
+         }
+
+         for (var i = 0; i < meetups.length; i++) {
+           if(meetups[i]["duration"]) {
+             date = new Date(meetups[i]["time"] + meetups[i]["duration"]);
+             var dateString = date.toString().split(' ');
+             var month = getMonth(dateString[1]).toString();
+             var day = dateString[2];
+             var year = dateString[3];
+             var time = dateString[4];
+             endDates.push(month + '/' + day + '/' + year + ' ' + time);
+           }
+           else
+             endDates.push("Not provided");
+         }
+           res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults, startDates: startDates, endDates: endDates});
         });
     });
   });
