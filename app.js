@@ -28,11 +28,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', freebies);
 app.use('/', routes);
 app.use('/', auth);
 app.use('/', users);
 app.use('/', bouncer.ruloggedin);
-app.use('/freebies', freebies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
