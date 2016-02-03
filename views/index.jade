@@ -16,8 +16,7 @@ block content
                     - var categoryid = category.id;
                     option(value=categoryid selected=(category ? (categoryid === "#{category.id}" ? "selected" : undefined) : undefined)) #{category.name}
             .form-group.footer
-              button.btn.btn-default(id="searchfreebies" type="submit") Submit 
-              a.btn.btn-danger(href='/freebies') Cancel
+              button.btn.btn-default.form-control(id="searchfreebies" type="submit") Submit 
 
     .row
       .fffooter.col-sm-12.col-md-8.col-md-offset-2
