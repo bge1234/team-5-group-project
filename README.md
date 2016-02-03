@@ -14,7 +14,6 @@ Denverites and cool people, & companies like DPL, museums/institutions/business
 * CSS
 * HTML
 * https://loginwithfacebook.firebaseapp.com
-* Mocha/Chai
 * APIs
 
 ### Feature list:

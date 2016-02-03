@@ -1,6 +1,9 @@
 extends ../layout
 
 block content
-  h1 This is the new freebies page
+  h1 This is the new freebies event page
   form(method='post' action='/freebies')
     include ../includes/freebie-form.jade
+    .form-group.footer
+      button.btn.btn-default(id="submitnewfreebie" type="submit") Submit 
+      a.btn.btn-danger(href='/freebies') Cancel

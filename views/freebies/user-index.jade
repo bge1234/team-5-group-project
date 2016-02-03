@@ -1,5 +1,18 @@
 extends ../layout
 
 block content
-  h1 This is the user's activies show page
-    .calendar
+  h1 This is the megauser freebies show page
+  a.createFreebie(href="freebies/new") Create Freebie
+  br
+  a.createFreebie(href="/signup") megauser login
+  br
+  a.createFreebie(href="/signout") megauser logout
+  a.mapLink(href="/map") Freebie Map
+  .calendar
+  if freebies
+    for freebie in freebies 
+      .event
+        .freebieTitle= freebie.name
+        .location
+          a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+        //- a.edit(href="/freebies/" + freebie.id + '/edit') Edit

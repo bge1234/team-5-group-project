@@ -1,18 +1,7 @@
-extends ./layout
+extends layout
 
 block content
-  p Here is a map:
-  div(id="maparea" style="width: 300px; height: 300px;")
-    script.
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('maparea'), {
-          zoom: 14,
-          center: {lat: #{lat}, lng: #{lng}}
-        });
-        var marker = new google.maps.Marker({
-          position: {lat: #{lat}, lng: #{lng}},
-          map: map
-        });
-      }
-
-  script(async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap")
+  .container-fluid
+    .row
+      .col-xl-12
+        include ./includes/freebie-map.jade

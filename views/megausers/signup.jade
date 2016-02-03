@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  .container-fluid
+    include ../includes/large-logo-header.jade            
+    .row
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+        h1 Would your company like to contribute events to freedenver.co?
+        p Sign up today to create a Company account with freedenver.co to be able to add, edit, and delete events. 
+        form(action="/users" method="post")
+          .form-group
+            input.form-control(type='text' name='name' placeholder='Choose a Company Name')
+          .form-group
+            input.form-control(type='text' name='url' placeholder='Choose a Company URL')
+          .form-group
+            input.form-control(type='text' name='username' placeholder='Choose a User Name')
+          .form-group   
+            input.form-control(type='password' name='password' placeholder='Choose a Password')
+          .form-group.footer
+            button.btn.btn-warning.form-control(type='submit') Sign Up 
