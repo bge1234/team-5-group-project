@@ -1,17 +1,86 @@
 extends ../layout
 
 block content
-  h1 This is the activies show page
-  a.createFreebie(href="freebies/new") Create Freebie
-  a.mapLink(href="/map") Freebie Map
-  .calendar
+  .container-fluid
+    include ../includes/large-logo-header.jade            
     if freebies
-      for freebie in freebies 
-        .event
-          .freebieTitle= freebie.name
-          .location
-            a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
-          a.edit(href="/freebies/" + freebie.id + '/edit') Edit
+    .row
+      .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
+        h2 freebie events
+        table.table.table-striped
+          thead
+            tr
+              td Event Name
+              td Start Date
+              td End Date
+              td Location
+          for freebie in freebies 
+            tr
+              td 
+                h4 #{freebie.name}
+              td #{freebie.start_date}
+              td #{freebie.end_date}
+              td
+                a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+        br        
+    .row
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+        h2 map that will eventually have all pins
+        include ../includes/freebie-map.jade              
     if events
-      for event in events 
-        li: a(href=''+event.event_url+'')= event.name 
+    .row
+      .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
+        h2 meetup events
+        table.table.table-striped
+          thead
+            tr
+              td Event Name
+              td Start Date
+              td End Date
+              td Location
+          each event, index in events 
+            tr
+              td 
+                h4 
+                  a(href="#{event.event_url}") #{event.name}
+              td= startDates[index]
+              td= endDates[index]
+              if event.venue
+                td
+                  a(href="/mapsearch?location=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
+              else
+                td Please join meetup to see location
+    .row
+      .fffooter.col-sm-12.col-md-8.col-md-offset-2
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/corporate-partner") Become a Corporate Partner
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/about") About
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/contact") Contact
+  //- h1 This is the activies show page
+  //- a.createFreebie(href="freebies/new") Create Freebie
+  //- a.mapLink(href="/map") Freebie Map
+  //- .calendar
+  //- if freebies
+  //-   for freebie in freebies 
+  //-     .event
+  //-       .freebieTitle= freebie.name
+  //-       .location
+  //-         a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+  //-       a.edit(href="/freebies/" + freebie.id + '/edit') Edit
+  //- if events
+  //-   table
+  //-     each event, index in events
+  //-       tr
+  //-         td
+  //-           a(href="#{event.event_url}") #{event.name}
+  //-         td= dates[index]
+  //-         if event.venue
+  //-           td
+  //-             a(href="/mapsearch?location=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
+  //-         else
+  //-           td This location is shown only to members of the meetup

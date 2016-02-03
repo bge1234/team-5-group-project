@@ -1,5 +1,20 @@
-extends layout
+extends ../layout
 
 block content
-  h2.title Welcome to #{title}
-  
+  .container-fluid
+    include ../includes/large-logo-header.jade  
+    .row
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+        h2 splash page
+        //- form(method='post' action='/splash')
+        //-   .col-sm-12.col-md-12.col-xl-12
+        //-     .form-group
+        //-         p  
+        //-         select.form-control(name="category" id="category")
+        //-           option(value="1" selected=(want ? (want.category === "1" ? "selected" : undefined) : undefined)) Apparel
+        //-           option(value="2" selected=(want ? (want.category === "2" ? "selected" : undefined) : undefined)) Housewares
+        //-           option(value="3" selected=(want ? (want.category === "3" ? "selected" : undefined) : undefined)) Miscellaneous 
+        //-           option(value="4" selected=(want ? (want.category === "4" ? "selected" : undefined) : undefined)) Technology
+        //-     .form-group.footer
+        //-       button.btn.btn-default(id="submitnewfreebie" type="submit") Submit 
+        //-       a.btn.btn-danger(href='/freebies') Cancel

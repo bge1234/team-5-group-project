@@ -1,5 +1,56 @@
 extends ../layout
 
 block content
-  h1 This is the user's activies show page
-    .calendar
+  .container-fluid
+    include ../includes/large-logo-header.jade            
+    if freebies
+    .row
+      .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
+        h2 freebie events
+        table.table.table-striped
+          thead
+            tr
+              td Event Name
+              td Start Date
+              td End Date
+              td Location
+          for freebie in freebies 
+            tr
+              td 
+                h4 #{freebie.name}
+              td #{freebie.start_date}
+              td #{freebie.end_date}
+              td
+                a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+        br        
+    .row
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+        h2 map that will eventually have all pins
+        include ../includes/freebie-map.jade              
+    if events
+    .row
+      .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
+        h2 meetup events
+        table.table.table-striped
+          thead
+            tr
+              td Event Name
+              td Link
+          for event in events 
+            tr
+              td 
+                h4 #{event.name}
+              td 
+              
+                a(href="#{event.event_url}") Link to Event on Meetup.com 
+    .row
+      .fffooter.col-sm-12.col-md-8.col-md-offset-2
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/corporate-partner") Become a Corporate Partner
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/about") About
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/contact") Contact

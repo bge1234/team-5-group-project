@@ -1,31 +1,35 @@
-label(for='name') Name
-br
-input(type='text' id='name' name='name' placeholder=freebies ? "" : "Name" value=freebies ? freebies.name : "")
-br
-label(for='location') Address
-br
-input(type='text' id='location' name='location' placeholder=freebies ? "" : "Address" value=freebies ? freebies.location : "")
-br
-label(for='start_date') Start date
-br
-input(type='text' id='start_date' name='start_date' placeholder=freebies ? "" : "MM/dd/yyyy hh:mm:ss" value=freebies ? freebies.start_date : "")
-br
-label(for='end') End date
-br
-input(type='text' id='end_date' name='end_date' placeholder=freebies ? "" : "MM/dd/yyyy hh:mm:ss" value=freebies ? freebies.end_date : "")
-br
-label(for='details') Details
-br
-if freebies
-  textarea(id='details', name='text') #{freebies.text}
-else
-  textarea(id='details', name='text' placeholder="Details")
-br
-label(for='url') URL
-br
-input(type='text' id='url' name='url' placeholder=freebies ? "" : "URL" value=freebies ? freebies.url : "")
-br
-input(type='text' id='location' name='location' placeholder=freebies ? "" : "Address" value=freebies ? freebies.creator_id : "" hidden)
-br
-button: a(href='/freebies') Cancel
-button(type='submit') Submit
+.col-sm-12.col-md-12.col-xl-12
+  .form-group.hidden
+    if user
+      p
+        input(type="text" id="creator_id" name='creator_id' value= (freebie ? freebie.creator_id : parseInt(user.id)))
+  .form-group
+    p
+      label(for="name") Name
+      br
+      input.form-control(type="text" id="name" name='name' placeholder="Name" value= (freebies ? freebies.name : ''))
+  .form-group
+    p
+      label(for="location") Address
+      br
+      input.form-control(type="text" id="location" name='location' placeholder="Location" value= (freebies ? freebies.location : ''))
+  .form-group
+    p
+      label(for="start_date") Start Date
+      br
+      input.form-control(type="date" id="start_date" name='start_date' value= (freebies ? freebies.start_date : ''))
+  .form-group
+    p
+      label(for="end_date") End Date
+      br
+      input.form-control(type="date" id="end_date" name='end_date' value= (freebies ? freebies.end_date : ''))
+  .form-group
+    p
+      label(for="details") Details
+      br
+      textarea.form-control(rows="5" id='details' name='text')= (freebie) ? freebie.text : ''
+  .form-group
+    p
+      label(for="url") Event URL
+      br
+      input.form-control(type="text" id="url" name='url' placeholder="Event URL" value= (freebies ? freebies.url : ''))

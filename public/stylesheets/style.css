@@ -1,61 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-div.fb_reset{
-  display: none;
-}
-
-.fb-buttons{
-  float: right;
-}
-
-.logout{
-  background-color: #3F5AA7;
-  color: white;
-  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
-  font-size: 11px;
-  border-radius: 10%;
-  border: none;
-}
- h1, .title{
-   text-align: center;
-   margin: 0 auto;
- }
-body {
-  height: auto;
-  width: 100%;
-  background-image: linear-gradient(#6C8672, #C4D4AF);
+  background-image: url('../images/denversunset.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  padding: 0px;
-}
-.parallax{
-  /*background-image: url(../images/denver-watercolor.png);*/
-  height: 800px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.navbar-default{
-  min-height: 90px;
-}
-.nav>li>a:hover,
-.nav>li:focus{
-  background-color: transparent;
-}
-.freebies  {
-  width: 25% !important;
-  margin: 0 auto;
+  /*background-color: black;*/
 }
 
+.mainthings {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
 
+.large-header-logo h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 150px;
+  color: black;
+  margin-bottom: 50px;
+}
 
+.small-header-logo h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: black;
+}
 
 .categories{
   border-radius: 10px;
@@ -67,46 +34,18 @@ body {
   color: #333333;
   background-color: rgba(255, 255, 255, 0.8);
 }
+
 label {
   margin-left: 1vh;
 }
+
 .fa {
   width: 100%;
 }
+
 label {
   font-size: 2vw;
   margin: auto;
   margin-left: 1vh;
   color: #2b2b2b;
-}
-
-
-
-
-.calendar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.event {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 200px;
-  border: 2px solid black;
-  background-color: rgba(30, 93, 106, 0.6);
-  margin: 2vh;
-}
-.parralax {
-  display: flex;
-}
-.freebieTitle {
-  margin: auto;
-}
-.createFreebie {
-  margin-right: 5vw;
-}
-.location {
-  margin: auto;
 }
