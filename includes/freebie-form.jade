@@ -34,3 +34,11 @@
       label(for="url") Event URL
       br
       input.form-control(type="text" id="url" name='url' placeholder="Event URL" value= (freebie ? freebie.url : ''))
+  .form-group
+    if categories
+      p
+        label(for="category_id") Category
+        br
+        select.form-control(name="category_id" id="category_id")
+          for category in categories
+            option(value=category.id selected=(freebie ? (freebie.category_id === category.id ? "selected" : undefined) : undefined)) #{category.name}

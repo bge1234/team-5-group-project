@@ -5,9 +5,8 @@ block content
   .container-fluid
     include ../../includes/large-logo-header.jade  
     .row
-      .mainthings.col-sm-12.col-md-8.col-md-offset-2(style="padding:10px;")
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
         h3 Contact Us
-
         form(action='/email' method='post')
           p
             label(for="email") Email
@@ -18,6 +17,4 @@ block content
             br
             input.form-control(type="textarea" placeholder="Message")
           button.btn.btn-default.form-control(type="submit") Submit
-          .centershit
-              include ../../includes/partner-nav.jade 
   include ../../includes/footer.jade  
