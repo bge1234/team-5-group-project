@@ -14,7 +14,7 @@ function Freebies(){
 router.get('/:username/freebies', function(req, res, next) {
   Users().where('username', req.params.username).first().then(function(result){
     Freebies().where('creator_id', result.id).then(function(results){
-      res.render('index', {freebies: results, user: result});
+      res.render('partners/show', {freebies: results, user: result});
     });
   });
 });
