@@ -1,4 +1,10 @@
 extends ../layout
 
 block content
-  h1 This is the contact page
+  include ../../includes/filter.jade
+  .container-fluid
+    include ../../includes/large-logo-header.jade  
+    .row
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2(style="padding:10px;")
+        h1 This is the contact page
+  include ../../includes/footer.jade  
