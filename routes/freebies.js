@@ -101,6 +101,7 @@ router.post('/', function(req, res, next) {
     res.redirect('/freebies');
     });
   };
+});
 
 // home + freebies all
 router.get('/freebies/:categoryid', function(req, res, next) {
@@ -136,8 +137,7 @@ router.get('/freebies/:categoryid', function(req, res, next) {
            else
              endDates.push("Not provided");
          }
-           res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults, startDates: startDates, endDates: endDates});
-        });
+         res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults, startDates: startDates, endDates: endDates});
       });
     });
   });

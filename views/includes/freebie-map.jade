@@ -1,4 +1,5 @@
-div(id="maparea" style="width: 800px; height: 400px;")
+div(id="maparea" style="width: 65vw; height: 40vh;")
+if events
   script.
    function initMap() {
      var eventsy = (!{JSON.stringify(events)})
@@ -14,6 +15,7 @@ div(id="maparea" style="width: 800px; height: 400px;")
          })
        }
      }
+   }
     //-  var collection = (!{JSON.stringify(freebies)});
     //-    collection.forEach(function(addy,index){
     //-    $.ajax({
@@ -29,8 +31,19 @@ div(id="maparea" style="width: 800px; height: 400px;")
     //-       });
     //-     });
     //-  });
+else
+  script.
+   function initMap() {
+     var map = new google.maps.Map(document.getElementById('maparea'), {
+       zoom: 14,
+       center: {lat: #{lat}, lng: #{lng}},
+     });
+     var marker = new google.maps.Marker({
+         position: {lat: #{lat}, lng: #{lng}},
+         map: map
+       });
    }
-    
-  script(src="https://code.jquery.com/jquery-2.2.0.min.js")          
-  script(async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap")
+
+script(src="https://code.jquery.com/jquery-2.2.0.min.js")          
+script(async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap")
 br
