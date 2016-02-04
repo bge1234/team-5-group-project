@@ -27,7 +27,7 @@ router.post('/signin', function(req, res, next) {
         bcrypt.compare(req.body.password, singleresult.password, function(err, res2) {
           if(res2 === true) {
             res.cookie("current_user", req.body.username);
-            res.redirect('/' + singleresult.username + '/freebies');
+            res.redirect('/' + singleresult.username + '/');
 
           }
           else {
@@ -41,7 +41,7 @@ router.post('/signin', function(req, res, next) {
 
 router.get('/signout', function(req, res, next) {
   res.clearCookie('current_user')
-  res.redirect('/freebies')
+  res.redirect('/')
 });
 
 // ADD NEW PARTNER
