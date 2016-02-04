@@ -48,7 +48,7 @@ router.post('/users', function (req, res, next) {
     if(validate.duplicateUser(testObj, result, ["username"])) {
       res.render('signin/signup', {error: "Username already exists"});
     }
-    else if(validate.passwordsMatch(req.body.password, req.body.password2)) {
+    else if(!validate.passwordsMatch(req.body.password, req.body.password2)) {
       res.render('signin/signup', {error: "Passwords must match"});
     }
     else {
