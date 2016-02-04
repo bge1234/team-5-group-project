@@ -5,5 +5,35 @@ block content
     include ../../includes/large-logo-header.jade            
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h1 This is the Partner personalized home page
+        h1 #{user.name} Home
+        p
+          a(href="/new/#{user.username}/freebies") Add a Freebie
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+        if freebies.length > 0
+          h2 Events
+          table.table.table-striped
+            thead
+              tr
+                td Event Name
+                td Start Date
+                td End Date
+                td Location
+                td Edit
+                td Delete
+            for freebie in freebies 
+              tr
+                td 
+                  h4 #{freebie.name}
+                td #{freebie.start_date}
+                td #{freebie.end_date}
+                td
+                  a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+                td
+                  a(href="/#{user.username}/freebies/#{freebie.id}/edit") Edit
+                td
+                  a(href="/#{user.username}/freebies/#{freebie.id}/delete") Delete
+                  
+          br
+        else
+          h4 You haven't added any freebies yet. Why not start now?
     include ../../includes/footer.jade  

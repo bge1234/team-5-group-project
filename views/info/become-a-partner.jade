@@ -5,12 +5,25 @@ block content
     include ../../includes/large-logo-header.jade  
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h1 Become a Partner
-        p Are you looking for exposure to new customers?  Free Denver can promote your business to visitors and residents of Denver.  Our mission is to become the go-to spot for the frugal consumers. 
-        br
+        h1 Become a Corporate Partner today!
+        p Are you looking for exposure to new consumers?  Freedenver.co can promote your business to visitors and residents of Denver.  
+        p Our mission is to become the go-to spot for the frugal consumers. 
         br
         .centershit
           include ../../includes/partner-nav.jade  
+    if users
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+          h1 Current Partners
+          table.table.table-striped
+            for user in users 
+              tr
+                td
+                  h3 #{user.name}
+                td   
+                  a(href="/#{user.username}/freebies") View this Partner's events       
+                td
+                  a(href="#{user.url}") Visit #{user.name}'s website
+
     include ../../includes/footer.jade  
   
         

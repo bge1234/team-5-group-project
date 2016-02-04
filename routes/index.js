@@ -26,7 +26,9 @@ router.post('/splash', function(req, res, next) {
 
 // become a partner page
 router.get('/info/become-a-partner', function(req, res, next) {
-  res.render('info/become-a-partner');
+  Users().select().then(function(results) {
+    res.render('info/become-a-partner', {users: results});
+  });
 });
 
 

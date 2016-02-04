@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  .container-fluid
+    include ../../includes/large-logo-header.jade            
+    .row          
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+        if freebies.length > 0
+          h2 #{user.name} Events
+          table.table.table-striped
+            thead
+              tr
+                td Event Name
+                td Start Date
+                td End Date
+                td Location
+            for freebie in freebies 
+              tr
+                td 
+                  h4 #{freebie.name}
+                td #{freebie.start_date}
+                td #{freebie.end_date}
+                td
+                  a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+                  
+          br
+        else
+          h4 This partner doesn't have any freebies yet. 
+    include ../../includes/footer.jade  
