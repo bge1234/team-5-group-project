@@ -6,6 +6,7 @@ block content
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
         h1 Sign in to your freedenver.co Company account
+        if errors
         form(action="/signin" method="post")
           .form-group
             input.form-control(type='text' name='username')
