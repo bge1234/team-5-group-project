@@ -76,7 +76,7 @@ router.get('/freebies/:categoryid', function(req, res, next) {
          var startDates = dates.starts(meetups);
          var endDates = dates.ends(meetups);
 
-         res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults, startDates: startDates, endDates: endDates});
+         res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: categoryresults, startDates: startDates, endDates: endDates, catID: parseInt(req.params.categoryid)});
       });
     });
   });
