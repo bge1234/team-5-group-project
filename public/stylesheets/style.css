@@ -1,8 +1,12 @@
-body {
+/*body {
   background-image: url('../images/denversunset.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /*background-color: black;*/
+  background-color: black;
+}*/
+
+.errors {
+  color: red;
 }
 
 .mainthings {
@@ -24,10 +28,26 @@ body {
   color: black;
 }
 
-.categories{
+.fffooter {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.categories {
+  border-radius: 10px;
+  position: absolute;;
+  top: 36%;
+  width: auto;
+  height: auto;
+  padding: 2vh;
+  color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#sticky.stick {
   border-radius: 10px;
   position: fixed;
-  top: 36%;
+  top: 0;
+  left: 0;
   width: auto;
   height: auto;
   padding: 2vh;
@@ -53,4 +73,14 @@ label {
   margin: auto;
   margin-left: 1vh;
   color: #2b2b2b;
+}
+.g-signin2 {
+  display: inline-block;
+}
+.signOut {
+  float: right;
+  height: 10vh;
+  width: auto;
+  border-radius: 10px;
+  margin-right: 2vh;
 }
