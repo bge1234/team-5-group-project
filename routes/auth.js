@@ -38,17 +38,11 @@ router.get('/signin', function(req, res, next) {
 router.post('/signin', function(req, res, next) {
   Users().where('username', req.body.username).first().then(function(result){
     bcrypt.compare(req.body.password, result.password, function(err, res2) {
-      console.log("req.body.password = " + req.body.password);
-      console.log("result.password = " + result.password);
-      console.log("res2 =" + res2);
       if(res2 === true) {
-        res.cookie("current_user", req.body.username);
-        // res.cookie("current_user", req.body.username, {secure: true});
-        console.log("success!");
+        res.cookie("current_user", req.body.username, {secure: true});
         res.redirect('/' + result.username + '/freebies');
       }
       else {
-        console.log("fail!");
         res.render('signin/signin', {error: "Incorrect username or password"});
       }
     });
