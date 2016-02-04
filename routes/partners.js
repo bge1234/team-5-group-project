@@ -10,7 +10,7 @@ function Freebies(){
  return knex('freebies');
 };
 
-// get specific Partner's freebies page
+// get specific Partner's home page
 router.get('/:username/freebies', function(req, res, next) {
   Users().where('username', req.params.username).first().then(function(result){
     Freebies().where('creator_id', result.id).then(function(results){

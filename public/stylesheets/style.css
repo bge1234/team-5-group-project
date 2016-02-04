@@ -10,7 +10,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   margin-bottom: 25px;
-  padding: 10px;
+  padding: 25px;
 }
 .partner-links {
   color: #000000;
@@ -22,11 +22,29 @@
   margin-bottom: 50px;
 }
 
+/*FOOTER STUFF*/
+
 .fffooter {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 25px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin-left: 25px;
+}
+
+li {
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+.centershit {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .categories {
