@@ -23,9 +23,6 @@
   margin-bottom: 50px;
 }
 
-.large-header-logo{
-  @media (min-width: 768px) and (max-width: 991px) { width: 80%; }
-}
 /*FOOTER STUFF*/
 
 .fffooter {
