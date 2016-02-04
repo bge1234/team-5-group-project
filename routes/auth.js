@@ -31,8 +31,8 @@ router.get('/signout', function(req, res, next) {
   res.redirect('/freebies')
 });
 
-// ADD NEW MEGAUSER
-// show page
+// ADD NEW PARTNER
+// show signup page
 router.get('/signup', function(req, res, next) {
   res.render('signin/signup');
 });
