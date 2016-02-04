@@ -1,11 +1,11 @@
 extends ../layout
 
 block content
-  include ../includes/filter.jade
+  include ../../includes/filter.jade
   .container-fluid
-    include ../includes/large-logo-header.jade  
+    include ../../includes/large-logo-header.jade  
     .row
-      .mainthings.col-sm-12.col-md-8.col-md-offset-2(style="padding:10px;")
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
         form(method='post' action='/splash')
           .col-sm-12.col-md-8.col-md-offset-2
             .form-group.col-sm-12.col-md-8.pull-left
@@ -41,7 +41,7 @@ block content
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
         h2 
-        include ../includes/freebie-map.jade              
+        include ../../includes/freebie-map.jade              
     if events
     .row
       .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
@@ -65,39 +65,4 @@ block content
                   a(href="/mapsearch?location=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
               else
                 td Please join meetup to see location
-    .row
-      .fffooter.col-sm-12.col-md-8.col-md-offset-2
-        .col-sm-12.col-md-2
-          p
-            a(href="/info/corporate-partner") Become a Corporate Partner
-        .col-sm-12.col-md-2
-          p
-            a(href="/info/about") About
-        .col-sm-12.col-md-2
-          p
-            a(href="/info/contact") Contact
-        .g-signin2(data-onsuccess='onSignIn')
-        a.signOut(href='/', onclick='signOut();') Sign out
-  //- h1 This is the activies show page
-  //- a.createFreebie(href="freebies/new") Create Freebie
-  //- a.mapLink(href="/map") Freebie Map
-  //- .calendar
-  //- if freebies
-  //-   for freebie in freebies 
-  //-     .event
-  //-       .freebieTitle= freebie.name
-  //-       .location
-  //-         a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
-  //-       a.edit(href="/freebies/" + freebie.id + '/edit') Edit
-  //- if events
-  //-   table
-  //-     each event, index in events
-  //-       tr
-  //-         td
-  //-           a(href="#{event.event_url}") #{event.name}
-  //-         td= dates[index]
-  //-         if event.venue
-  //-           td
-  //-             a(href="/mapsearch?location=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
-  //-         else
-  //-           td This location is shown only to members of the meetup
+    include ../../includes/footer.jade  

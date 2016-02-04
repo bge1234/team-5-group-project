@@ -1,12 +1,13 @@
 extends ../layout
 
 block content
-  include ../includes/large-logo-header.jade
+  include ../../includes/large-logo-header.jade
   .row 
     .mainthings.col-sm-12.col-md-8.col-md-offset-2
       h1 This is the edit freebies page
       if freebies
         form(method='post' action='/freebies/'+freebies.id+'')
-          include ../includes/freebie-form.jade
+          include ../../includes/freebie-form.jade
           br
           button: a(href='/freebies/'+freebies.id+'/delete') Delete
+  include ../../includes/footer.jade

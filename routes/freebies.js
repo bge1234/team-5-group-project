@@ -23,7 +23,7 @@ function Admin(){
  return knex('admin');
 };
 
-// get activites and maps page
+// freebies all main page
 router.get('/freebies', function(req, res, next) {
   Categories().select().then(function(categoryresults) {
     Freebies().select().then(function(results) {
@@ -40,32 +40,7 @@ router.get('/freebies', function(req, res, next) {
   });
 });
 
-// show add freebies page
-router.get('/new', function(req, res, next) {
-  res.render('freebies/new');
-});
-
-// add freebies
-router.post('/', function(req, res, next) {
-  var errors=[];
-  errors.push(validate.nameIsNotBlank(req.body.name));
-  errors.push(validate.locationIsNotBlank(req.body.location));
-  errors.push(validate.startDateIsNotBlank(req.body.start_date));
-  errors.push(validate.detailsNotBlank(req.body.text));
-  errors.push(validate.urlNotBlank(req.body.url));
-    errors = errors.filter(function(error) {
-      return error.length;
-    })
-      if (errors.length) {
-        res.render('freebies/new', {errors: errors, info: req.body})
-      } else {
-  Freebies().insert(req.body).then(function(results) {
-    res.redirect('/freebies');
-    });
-  };
-});
-
-// home + freebies all
+// freebies sorted by category
 router.get('/freebies/:categoryid', function(req, res, next) {
   Categories().select().then(function(categoryresults) {
     Freebies().where('category_id',req.params.categoryid).then(function(results) {
