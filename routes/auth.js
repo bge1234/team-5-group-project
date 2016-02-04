@@ -45,7 +45,13 @@ router.post('/users', function (req, res, next) {
       username: req.body.username
     };
 
-    if(!validate.checkForDuplicateUsers(testObj, result, ["username"])) {
+    if(validate.duplicateUser(testObj, result, ["username"])) {
+      res.render('signin/signup', {error: "Username already exists"});
+    }
+    else if(validate.passwordsMatch(req.body.password, req.body.password2)) {
+      res.render('signin/signup', {error: "Passwords must match"});
+    }
+    else {
       bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(req.body.password, salt, function(err, hash) {
           Users().insert({
@@ -59,8 +65,6 @@ router.post('/users', function (req, res, next) {
         });
       });
     }
-    else
-      res.render('signin/signup', {error: "Username already exists"});
   });
 });
 
