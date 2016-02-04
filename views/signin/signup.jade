@@ -7,6 +7,8 @@ block content
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
         h1 Would your company like to contribute events to freedenver.co?
         p Sign up today to create a Company account with freedenver.co to be able to add, edit, and delete events. 
+        if error
+          h4(style="color: red;")= error
         form(action="/users" method="post")
           .form-group
             input.form-control(type='text' name='name' placeholder='Choose a Company Name')
