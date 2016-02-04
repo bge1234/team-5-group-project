@@ -2,7 +2,7 @@ var randNum = function(min, max) {
 return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-var randImg = randNum(1, 10)
+var randImg = randNum(1, 8)
 
 function slideShow(){
   $('body').css({
