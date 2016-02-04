@@ -4,10 +4,12 @@ block content
   include ../../includes/large-logo-header.jade
   .row 
     .mainthings.col-sm-12.col-md-8.col-md-offset-2
-      h1 This is the edit freebies page
-      if freebies
-        form(method='post' action='/freebies/'+freebies.id+'')
-          include ../../includes/freebie-form.jade
-          br
-          button: a(href='/freebies/'+freebies.id+'/delete') Delete
+      h1 Edit Freebie
+      form(method='post' action='/#{user.username}/freebies')
+        include ../../includes/freebie-form.jade
+        .form-group.footer
+          p
+            button.btn.btn-default.form-control(id="submitnewfreebie" type="submit") Submit 
+          p
+            a.btn.btn-danger.form-control(href='/freebies') Cancel
   include ../../includes/footer.jade

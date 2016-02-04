@@ -59,4 +59,22 @@ router.get('/freebies/:category', function(req, res, next) {
   });
 });
 
+// get specific Partner's Public home page
+router.get('/:username/freebies', function(req, res, next) {
+  Users().where('username', req.params.username).first().then(function(result){
+    Freebies().where('creator_id', result.id).then(function(results){
+      res.render('partners/publicshow', {freebies: results, user: result});
+    });
+  });
+});
+
+// show a single Freebie
+router.get('/:username/freebies/:id', function(req, res, next) {
+  Users().where('username', req.params.username).first().then(function(result){
+    Freebies().where('id', req.params.id).then(function(results){
+      res.render('partners/publicshow', {freebies: results, user: result});
+    });
+  });
+});
+
 module.exports = router;
