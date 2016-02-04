@@ -11,15 +11,15 @@ block content
           h4(style="color: red;")= error
         form(action="/users" method="post")
           .form-group
-            input.form-control(type='text' name='name' placeholder='Company name')
+            input.form-control(type='text' name='name' placeholder='Company name' required)
           .form-group
-            input.form-control(type='text' name='url' placeholder='Company URL')
+            input.form-control(type='text' name='url' placeholder='Company URL' required)
           .form-group
-            input.form-control(type='text' name='username' placeholder='Choose a username')
+            input.form-control(type='text' name='username' placeholder='Choose a username' required)
           .form-group   
-            input.form-control(type='password' name='password' placeholder='Choose a password')
+            input.form-control(type='password' name='password' placeholder='Choose a password' required)
           .form-group   
-            input.form-control(type='password' name='password2' placeholder='Confirm password')
+            input.form-control(type='password' name='password2' placeholder='Confirm password' required)
           .form-group.footer
             button.btn.btn-warning.form-control(type='submit') Sign Up 
     include ../../includes/footer.jade  

@@ -3,17 +3,17 @@
   .form-group.hidden
     if user
       p
-        input(type="text" id="creator_id" name='creator_id' value='#{user.id}')
+        input(type="text" id="creator_id" name='creator_id' value='#{user.id}' required)
   .form-group
     p
       label(for="name") Name
       br
-      input.form-control(type="text" id="name" name='name' placeholder="Name" value= (user ? user.name : ''))
+      input.form-control(type="text" id="name" name='name' placeholder="Name" value= (user ? user.name : '') required)
   .form-group
     p
       label(for="location") Address
       br
-      input.form-control(type="text" id="location" name='location' placeholder="Location" value= (freebie ? freebie.location : ''))
+      input.form-control(type="text" id="location" name='location' placeholder="Location" value= (freebie ? freebie.location : '') required)
   .form-group
     p
       label(for="start_date") Start Date
