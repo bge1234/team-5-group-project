@@ -34,8 +34,7 @@ block content
                   h4 #{freebie.name}
                 td #{freebie.start_date}
                 td #{freebie.end_date}
-                td
-                  a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
+                td #{freebie.location}
           br
         else
           h4 No freebies exist for this category. Please check back later!
@@ -63,7 +62,7 @@ block content
               td= endDates[index]
               if event.venue
                 td
-                  a(href="/mapsearch?location=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
+                  a(href="http://maps.google.com/maps?saddr=&daddr=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
               else
                 td Please join meetup to see location
     include ../../includes/footer.jade
