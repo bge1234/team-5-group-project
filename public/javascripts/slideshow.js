@@ -14,4 +14,3 @@ function slideShow(){
   })
 }
 slideShow();
-setInterval(slideShow, 5000);
