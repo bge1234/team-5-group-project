@@ -2,7 +2,21 @@ extends ../layout
 
 block content
   .container-fluid
-    include ../includes/large-logo-header.jade            
+    include ../includes/large-logo-header.jade  
+    .row
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2(style="padding:10px;")
+        form(method='post' action='/splash')
+          .col-sm-12.col-md-8.col-md-offset-2
+            .form-group.col-sm-12.col-md-8.pull-left
+              if categories
+                p  
+                select.form-control(name="category" id="category")
+                  for category in categories
+                    - var categoryid = category.id;
+                    option(value=categoryid selected=(category ? (categoryid === "#{category.id}" ? "selected" : undefined) : undefined)) #{category.name}
+            .form-group.footer.pull-left(style="margin-top:10px;")
+              p
+                button.btn.btn-default.form-control(id="searchfreebies" type="submit") Submit 
     if freebies
     .row
       .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
@@ -25,7 +39,7 @@ block content
         br        
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h2 map that will eventually have all pins
+        h2 
         include ../includes/freebie-map.jade              
     if events
     .row
@@ -61,26 +75,3 @@ block content
         .col-sm-12.col-md-2
           p
             a(href="/info/contact") Contact
-  //- h1 This is the activies show page
-  //- a.createFreebie(href="freebies/new") Create Freebie
-  //- a.mapLink(href="/map") Freebie Map
-  //- .calendar
-  //- if freebies
-  //-   for freebie in freebies 
-  //-     .event
-  //-       .freebieTitle= freebie.name
-  //-       .location
-  //-         a(href="/mapsearch?location=#{freebie.location}") #{freebie.location}
-  //-       a.edit(href="/freebies/" + freebie.id + '/edit') Edit
-  //- if events
-  //-   table
-  //-     each event, index in events
-  //-       tr
-  //-         td
-  //-           a(href="#{event.event_url}") #{event.name}
-  //-         td= dates[index]
-  //-         if event.venue
-  //-           td
-  //-             a(href="/mapsearch?location=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
-  //-         else
-  //-           td This location is shown only to members of the meetup
