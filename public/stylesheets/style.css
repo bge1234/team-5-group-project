@@ -35,7 +35,7 @@
 .categories {
   border-radius: 10px;
   position: absolute;;
-  top: 36%;
+  top: 54%;
   width: auto;
   height: auto;
   padding: 2vh;
@@ -53,6 +53,9 @@
   padding: 2vh;
   color: #333333;
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+#sticky {
 }
 
 label {
