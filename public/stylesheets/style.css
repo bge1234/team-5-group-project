@@ -1,8 +1,12 @@
-body {
+/*body {
   background-image: url('../images/denversunset.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /*background-color: black;*/
+  background-color: black;
+}*/
+
+.errors {
+  color: red;
 }
 
 .mainthings {
@@ -22,6 +26,10 @@ body {
   font-family: 'Pacifico', cursive;
   font-size: 25px;
   color: black;
+}
+
+.fffooter {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .categories {

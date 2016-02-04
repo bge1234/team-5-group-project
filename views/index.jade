@@ -1,20 +1,31 @@
-extends ../layout
+extends ./layout
 
 block content
   .container-fluid
-    include ../includes/large-logo-header.jade  
+    include ./includes/large-logo-header.jade  
     .row
-      .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h2 splash page
-        //- form(method='post' action='/splash')
-        //-   .col-sm-12.col-md-12.col-xl-12
-        //-     .form-group
-        //-         p  
-        //-         select.form-control(name="category" id="category")
-        //-           option(value="1" selected=(want ? (want.category === "1" ? "selected" : undefined) : undefined)) Apparel
-        //-           option(value="2" selected=(want ? (want.category === "2" ? "selected" : undefined) : undefined)) Housewares
-        //-           option(value="3" selected=(want ? (want.category === "3" ? "selected" : undefined) : undefined)) Miscellaneous 
-        //-           option(value="4" selected=(want ? (want.category === "4" ? "selected" : undefined) : undefined)) Technology
-        //-     .form-group.footer
-        //-       button.btn.btn-default(id="submitnewfreebie" type="submit") Submit 
-        //-       a.btn.btn-danger(href='/freebies') Cancel
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2(style="height:375px; padding:100px; text-align:center; margin-bottom: 75px;")
+        h2 find free things to do
+        form(method='post' action='/splash')
+          .col-sm-12.col-md-6.col-md-offset-3
+            .form-group
+              if categories
+                p  
+                select.form-control(name="category" id="category")
+                  for category in categories
+                    - var categoryid = category.id;
+                    option(value=categoryid selected=(category ? (categoryid === "#{category.id}" ? "selected" : undefined) : undefined)) #{category.name}
+            .form-group.footer
+              button.btn.btn-default.form-control(id="searchfreebies" type="submit") Submit 
+
+    .row
+      .fffooter.col-sm-12.col-md-8.col-md-offset-2
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/corporate-partner") Become a Corporate Partner
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/about") About
+        .col-sm-12.col-md-2
+          p
+            a(href="/info/contact") Contact

@@ -7,19 +7,27 @@ function Users() {
    return knex('megausers');
 }
 
-/* GET home page. */
+function Categories(){
+ return knex('categories');
+};
+
+/* GET splash page. */
 router.get('/', function(req, res, next) {
-  // res.render('index', { title: 'FreeDenver.co' });
-  res.redirect('/freebies');
+  Categories().select().then(function(results) {
+    res.render('index', {categories: results});
+  });
+});
+
+// post from splash page
+router.post('/splash', function(req, res, next) {
+  var categoryid = req.body.category;
+  res.redirect('/freebies/' + categoryid +'');
 });
 
 router.get('/info/corporate-partner', function(req, res, next) {
   res.render('info/corporate-partner-info');
 });
 
-// router.post('/splash', function(req, res, next) {
-//   res.render('info/corporate-partner-info');
-// });
 
 // show all megausers
 router.get('/megausers', function(req, res, next) {
