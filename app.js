@@ -10,7 +10,7 @@ var unirest = require('unirest');
 var bouncer = require('./lib/bouncer');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./routes/partners');
 var freebies = require('./routes/freebies');
 var auth = require('./routes/auth');
 

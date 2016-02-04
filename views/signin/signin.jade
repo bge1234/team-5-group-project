@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   .container-fluid
-    include ../includes/large-logo-header.jade            
+    include ../../includes/large-logo-header.jade            
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
         h1 Sign in to your freedenver.co Company account
@@ -17,3 +17,7 @@ block content
               input.btn.btn-default#clickmeclickme2.form-control(type='submit' value='Signin')
             p
               a.btn.form-control.btn-warning(href="/signup" id="sssignup") Sign Up
+            
+          .g-signin2(data-onsuccess='onSignIn')
+            a.signOut(href='/', onclick='signOut();') Google Sign out
+    include ../../includes/footer.jade  

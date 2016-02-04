@@ -5,13 +5,12 @@ html
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
     link(href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body 
     meta(name='google-signin-client_id', content='586064499940-ci905vf67kmpl64tert0i82bhvsomqcn.apps.googleusercontent.com')
+  body 
     script(src='https://apis.google.com/js/platform.js', async='', defer='')
     block content
-    include includes/filter.jade
     block scripts
       script(src="https://code.jquery.com/jquery-2.2.0.min.js")
-      script(type="text/javascript", src="javascripts/filter.js")
+      script(src="../../javascripts/filter.js")
       script(src='../../javascripts/googleSignIn.js')
-      script(src="javascripts/slideshow.js")
+      script(src="../../javascripts/slideshow.js")
