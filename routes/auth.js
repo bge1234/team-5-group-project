@@ -8,21 +8,50 @@ function Users() {
    return knex('megausers');
 }
 
+function checkForDuplicates(objInput, arrDatabaseObjs, arrKeys) {
+  var arrFound = [];
+
+  for (var i = 0; i < arrKeys.length; i++) {
+    arrFound.push(false);
+
+    for (var j = 0; j < arrDatabaseObjs.length; j++) {
+      if (objInput[arrKeys[i]] === arrDatabaseObjs[j][arrKeys[i]])
+        arrFound[arrFound.length - 1] = true;
+    }
+  }
+
+  var found = true;
+
+  //found = true only if every element of arrFound is true. Otherwise, return false.
+  for (var i = 0; i < arrFound.length; i++) {
+    if(arrFound[i] === false)
+      found = false;
+  }
+
+  return found;
+}
+
 router.get('/signin', function(req, res, next) {
   res.render('signin/signin');
 });
 
 router.post('/signin', function(req, res, next) {
   Users().where('username', req.body.username).first().then(function(result){
-    if(!bcrypt.compare(req.body.password, result.password)){
-      console.log("logged in!");
-      res.cookie('current_user', result.id, {secure: true});
-      res.redirect('/' + result.username + '/freebies');
-      res.redirect('/freebies');
-    } else {
-      console.log("error - passwords don't match");
-      res.render('signin/signin');
-    }
+    bcrypt.compare(req.body.password, result.password, function(err, res2) {
+      console.log("req.body.password = " + req.body.password);
+      console.log("result.password = " + result.password);
+      console.log("res2 =" + res2);
+      if(res2 === true) {
+        res.cookie("current_user", req.body.username);
+        // res.cookie("current_user", req.body.username, {secure: true});
+        console.log("success!");
+        res.redirect('/' + result.username + '/freebies');
+      }
+      else {
+        console.log("fail!");
+        res.render('signin/signin', {error: "Incorrect username or password"});
+      }
+    });
   });
 });
 
@@ -36,14 +65,31 @@ router.get('/signout', function(req, res, next) {
 router.get('/signup', function(req, res, next) {
   res.render('signin/signup');
 });
+
 // connect new user to database
-router.post('/users', function(req, res, next) {
-  bcrypt.hash(req.body.password, 8, function(err, hash) {
-    Users().insert(req.body).then(function(result){
-      res.redirect('/signin');
-    });
+router.post('/users', function (req, res, next) {
+  Users().select().orderBy('id').then(function(result) {
+    var testObj = {
+      username: req.body.username
+    };
+
+    if(!checkForDuplicates(testObj, result, ["username"])) {
+      bcrypt.genSalt(10, function(err, salt) {
+        bcrypt.hash(req.body.password, salt, function(err, hash) {
+          Users().insert({
+            name: req.body.name,
+            url: req.body.url,
+            username:  req.body.username,
+            password: hash
+          }).then(function(result) {
+            res.redirect('/signin');
+          });
+        });
+      });
+    }
+    else
+      res.render('signin/signup', {error: "Username already exists"});
   });
 });
-
 
 module.exports = router;
