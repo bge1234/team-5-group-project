@@ -7,7 +7,7 @@ block content
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2(style="padding:10px;")
         h3 Contact Us
-        form
+        form(action='mailto:mmorrison1978@gmail.com')
           p
             label(for="email") Email
             br
@@ -16,6 +16,7 @@ block content
             label(for="message") Message
             br
             input.form-control(type="textarea" placeholder="Message")
+          button(type="submit") Submit
           .centershit
               include ../../includes/partner-nav.jade 
   include ../../includes/footer.jade  

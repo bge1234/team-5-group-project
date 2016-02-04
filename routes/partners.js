@@ -1,6 +1,7 @@
 var express = require('express');
 var knex = require('../db/knex.js');
 var router = express.Router();
+var nodemailer = require('nodemailer');
 
 function Users() {
    return knex('megausers');
