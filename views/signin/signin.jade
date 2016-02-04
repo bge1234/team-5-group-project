@@ -10,9 +10,9 @@ block content
           h4(style="color: red;")= error
         form(action="/signin" method="post")
           .form-group
-            input.form-control(type='text' name='username')
+            input.form-control(type='text' name='username' placeholder="Username")
           .form-group
-            input.form-control(type='password' name='password') 
+            input.form-control(type='password' name='password' placeholder="Password") 
           .form-group.footer
             p
               input.btn.btn-default#clickmeclickme2.form-control(type='submit' value='Signin')
