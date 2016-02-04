@@ -9,18 +9,19 @@ function Users() {
 }
 
 router.get('/signin', function(req, res, next) {
-  res.render('megausers/signin');
+  res.render('signin/signin');
 });
 
 router.post('/signin', function(req, res, next) {
   Users().where('username', req.body.username).first().then(function(result){
     if(!bcrypt.compare(req.body.password, result.password)){
-      res.cookie('current_user', result.id);
-      // res.redirect('/' + result.username + '/freebies');
+      console.log("logged in!");
+      res.cookie('current_user', result.id, {secure: true});
+      res.redirect('/' + result.username + '/freebies');
       res.redirect('/freebies');
     } else {
       console.log("error - passwords don't match");
-      res.render('megausers/signin');
+      res.render('signin/signin');
     }
   });
 });
@@ -33,7 +34,7 @@ router.get('/signout', function(req, res, next) {
 // ADD NEW MEGAUSER
 // show page
 router.get('/signup', function(req, res, next) {
-  res.render('megausers/signup');
+  res.render('signin/signup');
 });
 // connect new user to database
 router.post('/users', function(req, res, next) {

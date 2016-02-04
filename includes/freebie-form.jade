@@ -1,0 +1,36 @@
+include ../includes/errors.jade
+.col-sm-12.col-md-12.col-xl-12
+  .form-group.hidden
+    if user
+      p
+        input(type="text" id="creator_id" name='creator_id' value= (freebie ? freebie.creator_id : parseInt(user.id)))
+  .form-group
+    p
+      label(for="name") Name
+      br
+      input.form-control(type="text" id="name" name='name' placeholder="Name" value= (freebies ? freebies.name : ''))
+  .form-group
+    p
+      label(for="location") Address
+      br
+      input.form-control(type="text" id="location" name='location' placeholder="Location" value= (freebies ? freebies.location : ''))
+  .form-group
+    p
+      label(for="start_date") Start Date
+      br
+      input.form-control(type="date" id="start_date" name='start_date' value= (freebies ? freebies.start_date : ''))
+  .form-group
+    p
+      label(for="end_date") End Date
+      br
+      input.form-control(type="date" id="end_date" name='end_date' value= (freebies ? freebies.end_date : ''))
+  .form-group
+    p
+      label(for="details") Details
+      br
+      textarea.form-control(rows="5" id='details' name='text')= (freebie) ? freebie.text : ''
+  .form-group
+    p
+      label(for="url") Event URL
+      br
+      input.form-control(type="text" id="url" name='url' placeholder="Event URL" value= (freebies ? freebies.url : ''))

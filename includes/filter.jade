@@ -1,0 +1,16 @@
+.categories
+  #sticky_anchor
+  #sticky
+    i.fa.fa-filter.fa-3x
+      img.filterIcon(src="/images/filter.png")
+      .filterRow
+        form(method='post' action='/splash')
+          if categories
+            p
+            select.form-control(name="category" id="category")
+              for category in categories
+                - var categoryid = category.id;
+                option(value=categoryid selected=(category ? (categoryid === "#{category.id}" ? "selected" : undefined) : undefined)) #{category.name}
+          .form-group.footer.pull-left(style="margin-top:10px;")
+            p
+              button.btn.btn-default.form-control(id="searchfreebies" type="submit") Filter

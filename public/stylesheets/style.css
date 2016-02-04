@@ -1,8 +1,5 @@
 /*body {
-  background-image: url('../images/denversunset.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: black;
+  background-color: white;
 }*/
 
 .errors {
@@ -13,8 +10,11 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   margin-bottom: 25px;
+  padding: 10px;
 }
-
+.partner-links {
+  color: #000000;
+}
 .large-header-logo h1 {
   font-family: 'Pacifico', cursive;
   font-size: 150px;
@@ -22,14 +22,11 @@
   margin-bottom: 50px;
 }
 
-.small-header-logo h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 25px;
-  color: black;
-}
-
 .fffooter {
   background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 25px;
 }
 
 .categories {
@@ -60,6 +57,10 @@
 
 label {
   margin-left: 1vh;
+  font-size: 2vw;
+  margin: auto;
+  margin-left: 1vh;
+  color: #2b2b2b;
 }
 
 .fa {
@@ -71,12 +72,7 @@ label {
   width: auto;
 }
 
-label {
-  font-size: 2vw;
-  margin: auto;
-  margin-left: 1vh;
-  color: #2b2b2b;
-}
+/*GOOGLE SIGNIN STUFF*/
 .g-signin2 {
   display: inline-block;
 }
