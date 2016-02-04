@@ -80,4 +80,8 @@ router.post('/users', function (req, res, next) {
   });
 });
 
+router.post('/email', function (req, res, next) {
+  res.redirect("https://youtu.be/cpuexiPFgnY")
+})
+
 module.exports = router;
