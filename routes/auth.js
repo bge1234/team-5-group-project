@@ -15,7 +15,7 @@ router.get('/signin', function(req, res, next) {
 router.post('/signin', function(req, res, next) {
   Users().where('username', req.body.username).first().then(function(result){
     if(!bcrypt.compare(req.body.password, result.password)){
-      res.cookie('current_user', result.id);
+      res.cookie('current_user', result.id, {secure: true});
       // res.redirect('/' + result.username + '/freebies');
       res.redirect('/freebies');
     } else {
