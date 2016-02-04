@@ -8,29 +8,6 @@ function Users() {
    return knex('megausers');
 }
 
-function checkForDuplicates(objInput, arrDatabaseObjs, arrKeys) {
-  var arrFound = [];
-
-  for (var i = 0; i < arrKeys.length; i++) {
-    arrFound.push(false);
-
-    for (var j = 0; j < arrDatabaseObjs.length; j++) {
-      if (objInput[arrKeys[i]] === arrDatabaseObjs[j][arrKeys[i]])
-        arrFound[arrFound.length - 1] = true;
-    }
-  }
-
-  var found = true;
-
-  //found = true only if every element of arrFound is true. Otherwise, return false.
-  for (var i = 0; i < arrFound.length; i++) {
-    if(arrFound[i] === false)
-      found = false;
-  }
-
-  return found;
-}
-
 router.get('/signin', function(req, res, next) {
   res.render('signin/signin');
 });
@@ -73,7 +50,7 @@ router.post('/users', function (req, res, next) {
       username: req.body.username
     };
 
-    if(!checkForDuplicates(testObj, result, ["username"])) {
+    if(!validate.checkForDuplicateUsers(testObj, result, ["username"])) {
       bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(req.body.password, salt, function(err, hash) {
           Users().insert({
