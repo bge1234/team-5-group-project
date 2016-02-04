@@ -9,8 +9,7 @@
             p
             select.form-control(name="category" id="category")
               for category in categories
-                - var categoryid = category.id;
-                option(value=category.id selected=(category ? (catID === category.id ? "selected" : undefined) : undefined)) #{category.name}
+                option(value=category.name selected=(category ? (catname === category.name ? "selected" : undefined) : undefined)) #{category.name}
           .form-group.footer.pull-left(style="margin-top:10px;")
             p
               button.btn.btn-default.form-control(id="searchfreebies" type="submit") Filter

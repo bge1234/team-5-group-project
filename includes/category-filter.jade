@@ -4,8 +4,7 @@
       p  
       select.form-control(name="category" id="category")
         for category in categories
-          - var categoryid = category.id;
-          option(value=categoryid selected=(category ? (categoryid === "#{category.id}" ? "selected" : undefined) : undefined)) #{category.name}
+          option(value=category.name selected=(category ? (catname === category.name ? "selected" : undefined) : undefined)) #{category.name}
   .form-group.footer
     button.btn.btn-default(id="searchfreebies" type="submit") Submit 
     a.btn.btn-danger(href='/freebies') Cancel
