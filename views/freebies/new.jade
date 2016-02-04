@@ -4,9 +4,11 @@ block content
   include ../../includes/large-logo-header.jade
   .row 
     .mainthings.col-sm-12.col-md-8.col-md-offset-2
-      h1 This is the new freebies event page
-      form(method='post' action='/freebies')
+      h1 Add a new Freebie
+      form(method='post' action='/#{user.username}/freebies')
         include ../../includes/freebie-form.jade
         .form-group.footer
-          button.btn.btn-default(id="submitnewfreebie" type="submit") Submit 
-          a.btn.btn-danger(href='/freebies') Cancel
+          p
+            button.btn.btn-default.form-control(id="submitnewfreebie" type="submit") Submit 
+          p
+            a.btn.btn-danger.form-control(href='/freebies') Cancel

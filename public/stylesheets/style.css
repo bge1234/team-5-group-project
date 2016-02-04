@@ -1,6 +1,6 @@
-/*body {
-  background-color: white;
-}*/
+body {
+  padding: 25px;
+}
 
 .errors {
   color: red;
@@ -34,7 +34,7 @@
 
 ul {
   list-style: none;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 li {
@@ -43,7 +43,7 @@ li {
 }
 
 .centershit {
-  width: 50%;
+  width: 300px;
   margin: 0 auto;
 }
 
