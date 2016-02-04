@@ -6,10 +6,11 @@ html
     link(href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body 
+    meta(name='google-signin-client_id', content='586064499940-ci905vf67kmpl64tert0i82bhvsomqcn.apps.googleusercontent.com')
+    script(src='https://apis.google.com/js/platform.js', async='', defer='')
     block content
-    include includes/filter.jade          
+    include includes/filter.jade
     block scripts
       script(src="https://code.jquery.com/jquery-2.2.0.min.js")
       script(type="text/javascript", src="javascripts/filter.js")
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+      script(src='../../javascripts/googleSignIn.js')
