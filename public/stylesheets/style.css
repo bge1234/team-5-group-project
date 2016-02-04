@@ -14,7 +14,9 @@
   border-radius: 10px;
   margin-bottom: 25px;
 }
-
+.partner-links {
+  color: #000000;
+}
 .large-header-logo h1 {
   font-family: 'Pacifico', cursive;
   font-size: 150px;
