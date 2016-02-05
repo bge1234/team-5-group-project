@@ -1,6 +1,11 @@
-extends layout
+extends ./layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .container-fluid
+    include ../includes/large-logo-header.jade  
+    .row
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2
+        h1= message
+        h2= error.status
+        pre #{error.stack}
+    include ../includes/footer.jade  

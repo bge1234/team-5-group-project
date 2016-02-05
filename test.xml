@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:enc="http://purl.oclc.org/net/rss_2.0/enc#"
+ xmlns:ev="http://purl.org/rss/1.0/modules/event/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="https://denver.craigslist.org/search/sss?format=rss&#x26;query=free&#x25;20wood">
+<title>craigslist denver | for sale search "free wood"</title>
+<link>https://denver.craigslist.org/search/sss?query=free&#x25;20wood</link>
+<description></description>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:publisher>robot@craigslist.org</dc:publisher>
+<dc:creator>robot@craigslist.org</dc:creator>
+<dc:source>https://denver.craigslist.org/search/sss?format=rss&#x26;query=free&#x25;20wood</dc:source>
+<dc:title>craigslist denver | for sale search "free wood"</dc:title>
+<dc:type>Collection</dc:type>
+<syn:updateBase>2016-02-04T18:47:19-07:00</syn:updateBase>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updatePeriod>hourly</syn:updatePeriod>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5433528672.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5428153110.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/bid/5400187398.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5429290348.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5397077958.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5424517763.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/bid/5384278831.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5422479950.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/bid/5384371306.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5426214302.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5426173347.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5426165819.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5425891657.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5425313333.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5423943706.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5422818404.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5421689061.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5421560173.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5421428870.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5421274702.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5419878512.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5416415332.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5416284435.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5384857948.html" />
+  <rdf:li rdf:resource="http://denver.craigslist.org/zip/5385784463.html" />
+ </rdf:Seq>
+</items>
+</channel>
+<item rdf:about="http://denver.craigslist.org/zip/5433528672.html">
+<title><![CDATA[Free Wooden Pallets for Pick up (Englewood)]]></title>
+<link>http://denver.craigslist.org/zip/5433528672.html</link>
+<description><![CDATA[Hello,
+We have about a dozen standard and close to standard size wood pallets available for free for pick up down here at our shop. The pallets will be out front to the left of the green dumpster. Please feel free to stop by any time to pick these p [...]]]></description>
+<dc:date>2016-02-04T11:56:47-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5433528672.html</dc:source>
+<dc:title><![CDATA[Free Wooden Pallets for Pick up (Englewood)]]></dc:title>
+<dc:type>text</dc:type>
+<dcterms:issued>2016-02-04T11:56:47-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5428153110.html">
+<title><![CDATA[*** FREE WOOD, DOORS AND SCRAP METAL*** (Floyd Hill, Evergreen)]]></title>
+<link>http://denver.craigslist.org/zip/5428153110.html</link>
+<description><![CDATA[Free scrap wood and doors. Wood is perfect for firewood but would need to be cut to size.
+Also have a bunch of scrap metal from framing some walls.
+Would prefer that you take it all.
+Please bring help as I won't be able to help you load your truck [...]]]></description>
+<dc:date>2016-02-03T17:39:03-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5428153110.html</dc:source>
+<dc:title><![CDATA[*** FREE WOOD, DOORS AND SCRAP METAL*** (Floyd Hill, Evergreen)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00s0s_3yHanOjtdMS_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-02-03T17:39:03-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/bid/5400187398.html">
+<title><![CDATA[Phil Wood VELOCITY DEEP V CUSTOM buit WHEELset W/free BAG (Cycle Urbano) &#x0024;399]]></title>
+<link>http://denver.craigslist.org/bid/5400187398.html</link>
+<description><![CDATA[Deep V 700c
+This rim is the jack-of-all-trades. The deep section creates strength, aerodynamics and durability. Use it for training, racing, commuting, touring, track bikes or anything else you can think of. If you want one rim that can do it all, t [...]]]></description>
+<dc:date>2016-02-02T18:56:31-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/bid/5400187398.html</dc:source>
+<dc:title><![CDATA[Phil Wood VELOCITY DEEP V CUSTOM buit WHEELset W/free BAG (Cycle Urbano) &#x0024;399]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00k0k_aS4IbaRRq0K_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-02-02T18:56:31-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5429290348.html">
+<title><![CDATA[Free scrap metal, aluminum and wood cabinets (Golden)]]></title>
+<link>http://denver.craigslist.org/zip/5429290348.html</link>
+<description><![CDATA[Tons of aluminum, scrap metal and wood shelving for free. Came out of a demo site in Golden, CO. Must get rid of by 7AM February 2nd. Must pick up no delivery. Contact Nick for directions.]]></description>
+<dc:date>2016-02-01T15:12:45-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5429290348.html</dc:source>
+<dc:title><![CDATA[Free scrap metal, aluminum and wood cabinets (Golden)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00h0h_k92RrtmPH5m_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-02-01T15:12:45-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5397077958.html">
+<title><![CDATA[Free Wood (Lakewood)]]></title>
+<link>http://denver.craigslist.org/zip/5397077958.html</link>
+<description><![CDATA[A lot of this wood is fallen trees]]></description>
+<dc:date>2016-02-01T14:22:42-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5397077958.html</dc:source>
+<dc:title><![CDATA[Free Wood (Lakewood)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00p0p_giCqiVeChtx_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-02-01T14:22:42-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5424517763.html">
+<title><![CDATA[Free wood, mattresses, ...... (Bowles and Kipling in Littleton)]]></title>
+<link>http://denver.craigslist.org/zip/5424517763.html</link>
+<description><![CDATA[Free wood
+Two clean and good mattresses. The one behind the flowery one is a nice thick white mattress with pillow top (does have a small tinkle stain form my son, but that was the only time he wet the bed. No odor or anything.)
+Door shutters
+Thes [...]]]></description>
+<dc:date>2016-02-01T06:57:08-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5424517763.html</dc:source>
+<dc:title><![CDATA[Free wood, mattresses, ...... (Bowles and Kipling in Littleton)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00g0g_dZFZ9DNejqJ_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-02-01T06:57:08-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/bid/5384278831.html">
+<title><![CDATA[Phil Wood VELOCITY DEEP V CUSTOM buit WHEELset W/free BAG (Cycle Urbano) &#x0024;399]]></title>
+<link>http://denver.craigslist.org/bid/5384278831.html</link>
+<description><![CDATA[VELOCITY Deep V 700c
+This rim is the jack-of-all-trades. The deep section creates strength, aerodynamics and durability. Use it for training, racing, commuting, touring, track bikes or anything else you can think of. If you want one rim that can do  [...]]]></description>
+<dc:date>2016-01-31T22:38:31-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/bid/5384278831.html</dc:source>
+<dc:title><![CDATA[Phil Wood VELOCITY DEEP V CUSTOM buit WHEELset W/free BAG (Cycle Urbano) &#x0024;399]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00T0T_eFEJPRtg0hc_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-31T22:38:31-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5422479950.html">
+<title><![CDATA[Free wood, pallets and more]]></title>
+<link>http://denver.craigslist.org/zip/5422479950.html</link>
+<description><![CDATA[Trying to free up some space in my yard before the next storm hits. I have a stack pile of wood I need to get rid of, one pile is from taking pallets apart and old fencing. A lot of that can be recycled or for bonfires (these have nails) I have anoth [...]]]></description>
+<dc:date>2016-01-31T14:11:09-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5422479950.html</dc:source>
+<dc:title><![CDATA[Free wood, pallets and more]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00O0O_1ZL5DlNa1vd_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-31T14:11:09-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/bid/5384371306.html">
+<title><![CDATA[Phil Wood VELOCITY DEEP V CUSTOM buit WHEELset W/free BAG (Cycle Urbano) &#x0024;399]]></title>
+<link>http://denver.craigslist.org/bid/5384371306.html</link>
+<description><![CDATA[Deep V 700c
+This rim is the jack-of-all-trades. The deep section creates strength, aerodynamics and durability. Use it for training, racing, commuting, touring, track bikes or anything else you can think of. If you want one rim that can do it all, t [...]]]></description>
+<dc:date>2016-01-31T13:20:23-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/bid/5384371306.html</dc:source>
+<dc:title><![CDATA[Phil Wood VELOCITY DEEP V CUSTOM buit WHEELset W/free BAG (Cycle Urbano) &#x0024;399]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00T0T_eFEJPRtg0hc_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-31T13:20:23-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5426214302.html">
+<title><![CDATA[Free wood]]></title>
+<link>http://denver.craigslist.org/zip/5426214302.html</link>
+<description><![CDATA[Free wood. 2 pallets 10 pieces of firewood]]></description>
+<dc:date>2016-01-30T11:54:42-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5426214302.html</dc:source>
+<dc:title><![CDATA[Free wood]]></dc:title>
+<dc:type>text</dc:type>
+<dcterms:issued>2016-01-30T11:54:42-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5426173347.html">
+<title><![CDATA[Free wood (Aurora)]]></title>
+<link>http://denver.craigslist.org/zip/5426173347.html</link>
+<description><![CDATA[Variety of mahogany, plywood, also some variety of 1x1, 1x2, 2x4. Large load of dry wood - come and get it and it's all yours. You will need a van or pick up truck, there's quite a bit of wood here.]]></description>
+<dc:date>2016-01-30T11:30:48-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5426173347.html</dc:source>
+<dc:title><![CDATA[Free wood (Aurora)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00N0N_jZzf6km9NUE_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-30T11:30:48-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5426165819.html">
+<title><![CDATA[Free fire wood]]></title>
+<link>http://denver.craigslist.org/zip/5426165819.html</link>
+<description><![CDATA[Large branches, great for fire pit or fireplace or wood burning stove and the price is right.]]></description>
+<dc:date>2016-01-30T11:26:26-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5426165819.html</dc:source>
+<dc:title><![CDATA[Free fire wood]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00e0e_8Et54MJkguY_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-30T11:26:26-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5425891657.html">
+<title><![CDATA[Free Scrap Metal / Wood / Hog WireFencing (Parker)]]></title>
+<link>http://denver.craigslist.org/zip/5425891657.html</link>
+<description><![CDATA[Ripped out 3 acres of hog wire which is available now. 3 more acres to go. Also other scrap metals in the pile. T Post And wood some in very good shape 2x10 2x4 2x6 All free. Come pick up. Call me at
+ <a href="/fb/den/zip/5425891657" class="showcontact" title="click to show contact info">show contact info</a>
+]]></description>
+<dc:date>2016-01-30T08:44:08-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5425891657.html</dc:source>
+<dc:title><![CDATA[Free Scrap Metal / Wood / Hog WireFencing (Parker)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00m0m_2mEE2B6afLC_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-30T08:44:08-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5425313333.html">
+<title><![CDATA[Free Mulch and Fire wood (Wheat Ridge)]]></title>
+<link>http://denver.craigslist.org/zip/5425313333.html</link>
+<description><![CDATA[You come get it and it's yours. The location is by 29th Ave and Pierce St in Wheat Ridge.]]></description>
+<dc:date>2016-01-29T17:53:54-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5425313333.html</dc:source>
+<dc:title><![CDATA[Free Mulch and Fire wood (Wheat Ridge)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00Q0Q_fjsRDL9AA38_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-29T17:53:54-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5423943706.html">
+<title><![CDATA[FREE WOOD, SHELVES, MIRRORS OR TRADESHOW BOOTH (Denver Convention Center)]]></title>
+<link>http://denver.craigslist.org/zip/5423943706.html</link>
+<description><![CDATA[I had a booth made for the SIA tradeshow booth, the show ends on Sunday evening and I don't want to deal with it or keep it. It's is available for free, you just have to come to the show and take it down and take it out. You can use it as your own bo [...]]]></description>
+<dc:date>2016-01-28T19:40:46-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5423943706.html</dc:source>
+<dc:title><![CDATA[FREE WOOD, SHELVES, MIRRORS OR TRADESHOW BOOTH (Denver Convention Center)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00q0q_4Y7x4afXwTK_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-28T19:40:46-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5422818404.html">
+<title><![CDATA[Free Elm Wood (Denver)]]></title>
+<link>http://denver.craigslist.org/zip/5422818404.html</link>
+<description><![CDATA[More Free Elm Wood today...it's a big tree!!!!
+Come get it!!! Thank you
+Rope n Saddle Tree Service]]></description>
+<dc:date>2016-01-28T07:53:26-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5422818404.html</dc:source>
+<dc:title><![CDATA[Free Elm Wood (Denver)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/01313_773SP7oofhG_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-28T07:53:26-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5421689061.html">
+<title><![CDATA[Wood for free (Morrison)]]></title>
+<link>http://denver.craigslist.org/zip/5421689061.html</link>
+<description><![CDATA[Free wood for fireplaces .]]></description>
+<dc:date>2016-01-27T11:10:47-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5421689061.html</dc:source>
+<dc:title><![CDATA[Wood for free (Morrison)]]></dc:title>
+<dc:type>text</dc:type>
+<dcterms:issued>2016-01-27T11:10:47-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5421560173.html">
+<title><![CDATA[Free Scrap metal and wood, dog leash splitter (Denver)]]></title>
+<link>http://denver.craigslist.org/zip/5421560173.html</link>
+<description><![CDATA[I've got some free scrap--steel bed frame, insert from an old fireplace cover, couple of plumbing supply lines. Email if you want to pick them up for scrap. The bed frame is bent so don't email me saying you want it if you need one for your use.
+The [...]]]></description>
+<dc:date>2016-01-27T10:02:28-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5421560173.html</dc:source>
+<dc:title><![CDATA[Free Scrap metal and wood, dog leash splitter (Denver)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00c0c_jkx1ASFgp1M_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-27T10:02:28-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5421428870.html">
+<title><![CDATA[FREE FIRE WOOD (NEAR PEORIA AND COLFAX)]]></title>
+<link>http://denver.craigslist.org/zip/5421428870.html</link>
+<description><![CDATA[WE GOT FREE FIREWOOD FOR THOSE WHO WANT IT.
+FIRST COME, FIRST SERVED.
+YOU SNOOZE, YOU LOSE
+JOHN
+
+ <a href="/fb/den/zip/5421428870" class="showcontact" title="click to show contact info">show contact info</a>
+]]></description>
+<dc:date>2016-01-27T08:49:04-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5421428870.html</dc:source>
+<dc:title><![CDATA[FREE FIRE WOOD (NEAR PEORIA AND COLFAX)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00A0A_2rWxBh3pdTO_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-27T08:49:04-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5421274702.html">
+<title><![CDATA[Free Elm Wood (3116 York St.)]]></title>
+<link>http://denver.craigslist.org/zip/5421274702.html</link>
+<description><![CDATA[Free Elm Wood...come & get it today!!!
+Located @: 3116 York St.
+Denver CO 80221
+Thanks & have a blessed day!!!
+Rope n Saddle Tree Service]]></description>
+<dc:date>2016-01-27T07:04:17-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5421274702.html</dc:source>
+<dc:title><![CDATA[Free Elm Wood (3116 York St.)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00W0W_5W5AUkzUIx4_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-27T07:04:17-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5419878512.html">
+<title><![CDATA[Free Wood]]></title>
+<link>http://denver.craigslist.org/zip/5419878512.html</link>
+<description><![CDATA[I have a lot of wood that is yours for the taking. I cut down a 60' cottonwood tree and have huge stumps and plenty of small wood as well. Whether you need it for crafting wood or burning wood it is yours for free. Contact me if interested and we can [...]]]></description>
+<dc:date>2016-01-26T08:42:29-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5419878512.html</dc:source>
+<dc:title><![CDATA[Free Wood]]></dc:title>
+<dc:type>text</dc:type>
+<dcterms:issued>2016-01-26T08:42:29-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5416415332.html">
+<title><![CDATA[Free wood doors (Highlands Ranch)]]></title>
+<link>http://denver.craigslist.org/zip/5416415332.html</link>
+<description><![CDATA[FREE WOOD DOORS, all white, brass hardware.]]></description>
+<dc:date>2016-01-23T16:03:05-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5416415332.html</dc:source>
+<dc:title><![CDATA[Free wood doors (Highlands Ranch)]]></dc:title>
+<dc:type>text</dc:type>
+<dcterms:issued>2016-01-23T16:03:05-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5416284435.html">
+<title><![CDATA[Free Table Top -- quality wood (Barnum/Lakewood/Edgewater)]]></title>
+<link>http://denver.craigslist.org/zip/5416284435.html</link>
+<description><![CDATA[I have a free table top available. High quality wood, very sturdy. Was formerly used as the top of a drafting table. It's on the corner of Newton and W 5th.]]></description>
+<dc:date>2016-01-23T14:28:52-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5416284435.html</dc:source>
+<dc:title><![CDATA[Free Table Top -- quality wood (Barnum/Lakewood/Edgewater)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00b0b_eDAEKMFeDO8_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-23T14:28:52-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5384857948.html">
+<title><![CDATA[Free Wood! Valence and Shades (Westminster)]]></title>
+<link>http://denver.craigslist.org/zip/5384857948.html</link>
+<description><![CDATA[Remodeled house with an old theatre valence taken down. Built well with some dense wood. Can be used for free wood or the valence can be reused or reupholstered. Feel free to call, text, or email. Its pretty long, like 12 feet! There are shades you c [...]]]></description>
+<dc:date>2016-01-23T13:38:44-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5384857948.html</dc:source>
+<dc:title><![CDATA[Free Wood! Valence and Shades (Westminster)]]></dc:title>
+<dc:type>text</dc:type>
+<enc:enclosure resource="http://images.craigslist.org/00q0q_6lweASdkw7c_300x300.jpg" type="image/jpeg"/>
+<dcterms:issued>2016-01-23T13:38:44-07:00</dcterms:issued>
+</item>
+<item rdf:about="http://denver.craigslist.org/zip/5385784463.html">
+<title><![CDATA[Free scrap wood/kindle wood (Erie)]]></title>
+<link>http://denver.craigslist.org/zip/5385784463.html</link>
+<description><![CDATA[Free pallet/scrap wood available for pickup
+4245 county road 6
+Erie, 80516]]></description>
+<dc:date>2016-01-23T12:45:03-07:00</dc:date>
+<dc:language>en-us</dc:language>
+<dc:rights>&#x26;copy; 2016 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+<dc:source>http://denver.craigslist.org/zip/5385784463.html</dc:source>
+<dc:title><![CDATA[Free scrap wood/kindle wood (Erie)]]></dc:title>
+<dc:type>text</dc:type>
+<dcterms:issued>2016-01-23T12:45:03-07:00</dcterms:issued>
+</item>
+</rdf:RDF>

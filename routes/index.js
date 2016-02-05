@@ -49,4 +49,16 @@ router.get('/info/contact', function(req, res, next) {
   res.render('info/contact');
 });
 
+// free things results page
+router.post('/freethings', function(req, res, next) {
+  var thingiesearchhh = req.body.freethingsearch;
+  res.redirect('/freethings/'+thingiesearchhh);
+});
+
+// free things results page
+router.get('/freethings/:searchterm', function(req, res, next) {
+  var searchy = req.params.searchterm;
+  res.render('freethings', {searchterm: searchy});
+});
+
 module.exports = router;
