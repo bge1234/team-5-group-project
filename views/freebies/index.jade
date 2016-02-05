@@ -69,5 +69,7 @@ block content
                   a(href="http://maps.google.com/maps?saddr=&daddr=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
               else
                 td Please join meetup to see location
+    script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+    script(src="../../javascripts/filter.js")
     include ../../includes/footer.jade
     
