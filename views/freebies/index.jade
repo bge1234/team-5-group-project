@@ -29,14 +29,15 @@ block content
                 td Start Date
                 td End Date
                 td Location
-            for freebie in freebies 
+            each freebie, index in freebies 
               tr
                 td 
                   h4
                     a(href="#{freebie.url}" style="color: black;") #{freebie.name}
-                td #{freebie.start_date}
-                td #{freebie.end_date}
-                td #{freebie.location}
+                td= freebieStartDates[index]
+                td= freebieEndDates[index]
+                td
+                  a(href="http://maps.google.com/maps?saddr=&daddr=#{freebie.location}" style="color: black;") #{freebie.location}
           br
         else
           h4 No freebies exist for this category. Please check back later!
@@ -62,8 +63,8 @@ block content
               td 
                 h4 
                   a(href="#{event.event_url}") #{event.name}
-              td= startDates[index]
-              td= endDates[index]
+              td= meetupStartDates[index]
+              td= meetupEndDates[index]
               if event.venue
                 td
                   a(href="http://maps.google.com/maps?saddr=&daddr=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}

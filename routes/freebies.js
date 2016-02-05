@@ -30,11 +30,14 @@ router.get('/freebies', function(req, res, next) {
       unirest.get('https://api.meetup.com/2/open_events?&sign=true&photo-host=public&country=us&city=denver&state=co&text=free&category=1,18,4,5,6,8,9,11,14,15,17,20,21&radius=15&status=upcoming&key=' + apiKey)
        .end(function(response) {
 
-        var meetups = response.body.results;
-        var startDates = dates.starts(meetups);
-        var endDates = dates.ends(meetups);
+        var freebieStartDates = dates.freebieProcess(results, "start_date");
+        var freebieEndDates = dates.freebieProcess(results, "end_date");
 
-        res.render('freebies/index', {freebies: results, events: meetups, startDates: startDates, endDates: endDates, categories: categoryresults});
+        var meetups = response.body.results;
+        var meetupStartDates = dates.meetupStarts(meetups);
+        var meetupEndDates = dates.meetupEnds(meetups);
+
+        res.render('freebies/index', {freebies: results, events: meetups, freebieStartDates: freebieStartDates, freebieEndDates: freebieEndDates, meetupStartDates: meetupStartDates, meetupEndDates: meetupEndDates, categories: categoryresults});
       })
     })
   });
@@ -48,11 +51,14 @@ router.get('/freebies/:category', function(req, res, next) {
         unirest.get('https://api.meetup.com/2/open_events?&sign=true&photo-host=public&country=us&city=denver&state=co&text=free&category=1,18,4,5,6,8,9,11,14,15,17,20,21&radius=15&status=upcoming&key=' + '3f7d255365182d12465e396b6267182e')
          .end(function(response) {
 
-           var meetups = response.body.results;
-           var startDates = dates.starts(meetups);
-           var endDates = dates.ends(meetups);
+          var freebieStartDates = dates.freebieProcess(results, "start_date");
+          var freebieEndDates = dates.freebieProcess(results, "end_date");
 
-           res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: allcategories, startDates: startDates, endDates: endDates, catname: req.params.category});
+          var meetups = response.body.results;
+          var meetupStartDates = dates.meetupStarts(meetups);
+          var meetupEndDates = dates.meetupEnds(meetups);
+
+           res.render('freebies/index', {freebies: results, events: meetups, lat: 39.757785, lng: -105.007142, categories: allcategories, freebieStartDates: freebieStartDates, freebieEndDates: freebieEndDates, meetupStartDates: meetupStartDates, meetupEndDates: meetupEndDates, catname: req.params.category});
         });
       });
     });
