@@ -20,8 +20,8 @@ block content
                 button.btn.btn-default.form-control(id="searchfreebies" type="submit") Submit 
     .row
       .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
-        if freebies.length > 0
-          h2 freebie events
+        if freebies.length > 0 
+          //- h2 #{category.name} 
           table.table.table-striped
             thead
               tr
@@ -41,7 +41,7 @@ block content
           h4 No freebies exist for this category. Please check back later!
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h2 
+        h2 Get Outside
         include ../../includes/freebie-map.jade
     if events
     .row
@@ -67,3 +67,4 @@ block content
               else
                 td Please join meetup to see location
     include ../../includes/footer.jade
+    

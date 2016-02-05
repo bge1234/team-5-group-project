@@ -13,23 +13,35 @@ router.get('/signin', function(req, res, next) {
 });
 
 router.post('/signin', function(req, res, next) {
-  Users().where('username', req.body.username).first().then(function(result){
-    bcrypt.compare(req.body.password, result.password, function(err, res2) {
-      if(res2 === true) {
-        res.cookie("current_user", req.body.username);
-        res.redirect('/' + result.username + '/');
+  Users().select().then(function(result) {
 
-      }
-      else {
-        res.render('signin/signin', {error: "Incorrect username or password"});
-      }
-    });
+    var testObj = {
+      username: req.body.username
+    };
+
+    if(!validate.userExists(testObj, result, ["username"])) {
+      res.render('signin/signin', {error: "Username does not exist"});
+    }
+    else {
+      Users().where('username', req.body.username).first().then(function(singleresult) {
+        bcrypt.compare(req.body.password, singleresult.password, function(err, res2) {
+          if(res2 === true) {
+            res.cookie("current_user", req.body.username);
+            res.redirect('/' + singleresult.username + '/');
+
+          }
+          else {
+            res.render('signin/signin', {error: "Incorrect username or password"});
+          }
+        });
+      });
+    }
   });
 });
 
 router.get('/signout', function(req, res, next) {
   res.clearCookie('current_user')
-  res.redirect('/freebies')
+  res.redirect('/')
 });
 
 // ADD NEW PARTNER
@@ -45,7 +57,7 @@ router.post('/users', function (req, res, next) {
       username: req.body.username
     };
 
-    if(validate.duplicateUser(testObj, result, ["username"])) {
+    if(validate.userExists(testObj, result, ["username"])) {
       res.render('signin/signup', {error: "Username already exists"});
     }
     else if(!validate.passwordsMatch(req.body.password, req.body.password2)) {

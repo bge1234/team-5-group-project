@@ -11,6 +11,10 @@ function Freebies(){
  return knex('freebies');
 };
 
+function Categories(){
+ return knex('categories');
+};
+
 // Show a Partner's Private home page
 router.get('/:username', function(req, res, next) {
   Users().where('username', req.params.username).first().then(function(result){
@@ -22,8 +26,10 @@ router.get('/:username', function(req, res, next) {
 
 // Partner's Private add freebies page
 router.get('/new/:username/freebies', function(req, res, next) {
-  Users().where('username', req.params.username).first().then(function(result){
-    res.render('freebies/new', {user: result});
+  Categories().select().then(function(categoryresults) {
+    Users().where('username', req.params.username).first().then(function(result){
+      res.render('freebies/new', {user: result, categories: categoryresults});
+    });
   });
 });
 
@@ -36,9 +42,11 @@ router.post('/:username/freebies', function(req, res, next) {
 
 // Partner's edit freebies
 router.get('/:username/freebies/:id/edit', function(req, res, next) {
-  Users().where('username', req.params.username).first().then(function(uresult){
-    Freebies().where('id', req.params.id).first().then(function(fresult){
-      res.render('freebies/edit', { freebie: fresult, user: uresult });
+  Categories().select().then(function(categoryresults) {
+    Users().where('username', req.params.username).first().then(function(uresult){
+      Freebies().where('id', req.params.id).first().then(function(fresult){
+        res.render('freebies/edit', { freebie: fresult, user: uresult, categories: categoryresults });
+      });
     });
   });
 });

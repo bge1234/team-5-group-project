@@ -1,7 +1,7 @@
 # freedenver.co
 A site that pulls information on free denver freebiess and things.
 
-* Heroku: https://freedenver.herokuapp.com
+* URL: http://freedenver.co (loads https://freedenver.herokuapp.com from Heroku)
 * GitHub: https://github.com/bge1234/team-5-group-project
 
 ### Potential users:

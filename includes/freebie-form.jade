@@ -3,17 +3,17 @@
   .form-group.hidden
     if user
       p
-        input(type="text" id="creator_id" name='creator_id' value='#{user.id}')
+        input(type="text" id="creator_id" name='creator_id' value='#{user.id}' required)
   .form-group
     p
       label(for="name") Name
       br
-      input.form-control(type="text" id="name" name='name' placeholder="Name" value= (user ? user.name : ''))
+      input.form-control(type="text" id="name" name='name' placeholder="Name" value= (user ? user.name : '') required)
   .form-group
     p
       label(for="location") Address
       br
-      input.form-control(type="text" id="location" name='location' placeholder="Location" value= (freebie ? freebie.location : ''))
+      input.form-control(type="text" id="location" name='location' placeholder="Location" value= (freebie ? freebie.location : '') required)
   .form-group
     p
       label(for="start_date") Start Date
@@ -34,3 +34,11 @@
       label(for="url") Event URL
       br
       input.form-control(type="text" id="url" name='url' placeholder="Event URL" value= (freebie ? freebie.url : ''))
+  .form-group
+    if categories
+      p
+        label(for="category_id") Category
+        br
+        select.form-control(name="category_id" id="category_id")
+          for category in categories
+            option(value=category.id selected=(freebie ? (freebie.category_id === category.id ? "selected" : undefined) : undefined)) #{category.name}
