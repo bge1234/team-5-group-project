@@ -6,7 +6,7 @@ block content
     include ../../includes/large-logo-header.jade  
     .row
       .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h3 Contact Us
+        h1 Contact Us
         form(action='mailto:bge1234@gmail.com?subject=FreeDenver.CO' method='post')
           p
             label(for="email") Email
@@ -16,5 +16,6 @@ block content
             label(for="message") Message
             br
             input.form-control(type="textarea" placeholder="Message" required)
-          button.btn.btn-default.form-control(type="submit") Submit
+          p  
+            button.btn.btn-default.form-control(type="submit") Submit
   include ../../includes/footer.jade  
