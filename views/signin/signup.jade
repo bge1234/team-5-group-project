@@ -11,11 +11,11 @@ block content
           h4(style="color: red;")= error
         form(action="/users" method="post")
           .form-group
-            input.form-control(type='text' name='name' placeholder='Company name' required)
+            input.form-control(type='text' name='name' placeholder=user ? '' : 'Company name' value=user ? user.name : '' required)
           .form-group
-            input.form-control(type='text' name='url' placeholder='Company URL' pattern="https?://.+" required)
+            input.form-control(type='text' name='url' placeholder=user ? '' : 'Company URL' pattern="https?://.+" value=user ? user.url : '' required)
           .form-group
-            input.form-control(type='text' name='username' placeholder='Choose a username' required)
+            input.form-control(type='text' name='username' placeholder=user ? '' : 'Choose a username' value=user ? user.username : '' required)
           .form-group   
             input.form-control(type='password' name='password' placeholder='Choose a password' required)
           .form-group   

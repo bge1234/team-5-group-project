@@ -58,10 +58,20 @@ router.post('/users', function (req, res, next) {
     };
 
     if(validate.userExists(testObj, result, ["username"])) {
-      res.render('signin/signup', {error: "Username already exists"});
+      var userdata = {
+        name: req.body.name,
+        url: req.body.url,
+        username: req.body.username
+      };
+      res.render('signin/signup', {error: "Username already exists", user: userdata});
     }
     else if(!validate.passwordsMatch(req.body.password, req.body.password2)) {
-      res.render('signin/signup', {error: "Passwords must match"});
+      var userdata = {
+        name: req.body.name,
+        url: req.body.url,
+        username: req.body.username
+      };
+      res.render('signin/signup', {error: "Passwords must match", user: userdata});
     }
     else {
       bcrypt.genSalt(10, function(err, salt) {
