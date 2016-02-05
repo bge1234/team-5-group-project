@@ -4,8 +4,11 @@ block content
   .container-fluid
     include ../../includes/large-logo-header.jade  
     .row
-      .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h1 About Us
+      .mainthings.col-sm-12.col-md-8.col-md-offset-2(style="padding:10px;")
+        h3 About Free Denver
+        br
+        p “I need more frugality. I wonder where I can buy some.” 
+        p         ― Jarod Kintz
         p
         | If you believe the best things in life are free then you've come to the right place.  This page is devoted to finding a 
         | variety of activities without having to break the bank.  Whether you're into 
@@ -14,5 +17,9 @@ block content
         a(href='/freebies/hiking') hiking
         | , 
         a(href='/freebies/yoga') yoga
-        |     or meeting new people youll find something here.
+        |     or meeting new people youll find something interesting to do here.  
+        p.filler 
+        .centershit
+            include ../../includes/partner-nav.jade 
+
     include ../../includes/footer.jade  
