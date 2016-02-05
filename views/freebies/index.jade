@@ -35,13 +35,15 @@ block content
                   h4
                     a(href="#{freebie.url}" style="color: black;") #{freebie.name}
                 td
-                  | #{freebieStartDates[index].split(' ')[0]}
-                  br
-                  | #{freebieStartDates[index].split(' ')[1]} #{freebieStartDates[index].split(' ')[2]}
+                  if freebieStartDates[index]
+                    | #{freebieStartDates[index].split(' ')[0]}
+                    br
+                    | #{freebieStartDates[index].split(' ')[1]} #{freebieStartDates[index].split(' ')[2]}
                 td
-                  | #{freebieEndDates[index].split(' ')[0]}
-                  br
-                  | #{freebieEndDates[index].split(' ')[1]} #{freebieEndDates[index].split(' ')[2]}
+                  if freebieEndDates[index]
+                    | #{freebieEndDates[index].split(' ')[0]}
+                    br
+                    | #{freebieEndDates[index].split(' ')[1]} #{freebieEndDates[index].split(' ')[2]}
                 td
                   a(href="http://maps.google.com/maps?saddr=&daddr=#{freebie.location}" style="color: black;") #{freebie.location}
           br
