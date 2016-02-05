@@ -34,8 +34,14 @@ block content
                 td 
                   h4
                     a(href="#{freebie.url}" style="color: black;") #{freebie.name}
-                td= freebieStartDates[index]
-                td= freebieEndDates[index]
+                td
+                  | #{freebieStartDates[index].split(' ')[0]}
+                  br
+                  | #{freebieStartDates[index].split(' ')[1]} #{freebieStartDates[index].split(' ')[2]}
+                td
+                  | #{freebieStartDates[index].split(' ')[0]}
+                  br
+                  | #{freebieStartDates[index].split(' ')[1]} #{freebieStartDates[index].split(' ')[2]}
                 td
                   a(href="http://maps.google.com/maps?saddr=&daddr=#{freebie.location}" style="color: black;") #{freebie.location}
           br
@@ -63,8 +69,14 @@ block content
               td 
                 h4 
                   a(href="#{event.event_url}") #{event.name}
-              td= meetupStartDates[index]
-              td= meetupEndDates[index]
+              td
+                | #{meetupStartDates[index].split(' ')[0]}
+                br
+                | #{meetupStartDates[index].split(' ')[1]} #{meetupStartDates[index].split(' ')[2]}
+              td
+                | #{meetupStartDates[index].split(' ')[0]}
+                br
+                | #{meetupStartDates[index].split(' ')[1]} #{meetupStartDates[index].split(' ')[2]}
               if event.venue
                 td
                   a(href="http://maps.google.com/maps?saddr=&daddr=#{event.venue.address_1},+#{event.venue.city},+#{event.venue.country}" style="color: black;") #{event.venue.address_1}, #{event.venue.city}, #{event.venue.country}
