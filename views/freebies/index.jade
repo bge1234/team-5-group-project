@@ -32,17 +32,20 @@ block content
             for freebie in freebies 
               tr
                 td 
-                  h4 #{freebie.name}
+                  h4
+                    a(href="#{freebie.url}" style="color: black;") #{freebie.name}
                 td #{freebie.start_date}
                 td #{freebie.end_date}
                 td #{freebie.location}
           br
         else
           h4 No freebies exist for this category. Please check back later!
-    .row
-      .mainthings.col-sm-12.col-md-8.col-md-offset-2
-        h2 Get Outside
-        include ../../includes/freebie-map.jade
+    if catname === "biking" || catname === "hiking" || catname === "parks"
+      .row
+        .mainthings.col-sm-12.col-md-8.col-md-offset-2
+          h2 Get Outside
+          p Find information on local outdoor activities, i.e. biking trails, hiking, and parks
+          include ../../includes/freebie-map.jade
     if events
     .row
       .mainthings.table-responsive.col-sm-12.col-md-8.col-md-offset-2
